@@ -71,8 +71,8 @@ class ShopController extends Controller
         
     }
 
-    public function buyNow(Request $request){
-        $data = $request->all();
-        return 'Chức năng chưa hoàn thiện';
-    }
+    // public function buyNow(Request $request){
+    //     $data = $request->all();
+    //     return 'Chức năng chưa hoàn thiện';
+    // }
 }

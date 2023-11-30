@@ -7,7 +7,7 @@
         <div class="details details2">
             <div class="recentOrders">
                 <div class="cardHeader">
-                    <h2>Create New Brand</h2>
+                    <h2>Tạo thương hiệu</h2>
                 </div>
                 <form class="formProduct" method="POST" action="admin/brand/store" novalidate>
                     @csrf
@@ -16,31 +16,31 @@
                         @if(session('success'))
                         <div class="alert alert-success d-flex justify-content-between" role="alert">
                             <strong>{{session('success')}}</strong>
-                            <a href="./admin/brand">View Brand List</a>
+                            <a href="./admin/brand">Danh sách thương hiệu</a>
                         </div>
                         @endif
                             <div class="form-group">
-                                <label for="brandname">Brand Name
+                                <label for="brandname">Tên
                                     <span class="text-danger">*</span>
                                 </label>
-                                <input class="form-control" type="text" name="brandname" placeholder="Brand Name" id="brandname" required>
-                                <div class="invalid-feedback">Please type a brand name valid</div>
+                                <input class="form-control" type="text" name="brandname" placeholder="Tên thương hiệu" id="brandname" required>
+                                <div class="invalid-feedback">Vui lòng nhập tên thương hiệu hợp lệ</div>
                                 @error('brandname')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="description">Description
+                                <label for="description">Miêu tả
                                     <span class="text-danger">*</span>
                                 </label>
                                 <textarea class="textarea-category" name="description" id="description" cols="30" rows="10"></textarea>
-                                <div class="invalid-feedback">Please enter a description brand</div>
+                                <div class="invalid-feedback">Vui lòng nhập mô tả thương hiệu</div>
                                 @error('description')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="active">Active
+                                <label for="active">Trạng thái
                                     <span class="text-danger">*</span>
                                 </label>
                                 <select name="active" id="active" >
@@ -51,7 +51,7 @@
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
-                            <button type="submit" class="btn btnAdd btnSaveProfile">Create</button>
+                            <button type="submit" class="btn btnAdd btnSaveProfile">Tạo</button>
                         </div>
                     </div>
                     

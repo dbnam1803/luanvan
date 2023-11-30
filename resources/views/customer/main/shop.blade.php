@@ -11,7 +11,7 @@
             <div class="breadcrumb-content text-center">
               <h1 class="breadcrumb-content-title text-white">Shop</h1>
               <ul class="breadcrumb-content-menu d-flex justify-content-center mb-0">
-                <li class="breadcrumb-content-menu-items"><a class="text-white" href="/">Home</a></li>
+                <li class="breadcrumb-content-menu-items"><a class="text-white" href="/">Trang chủ</a></li>
                 <div class="breadcrumb-divider"></div>
                 <li class="breadcrumb-content-menu-items"><span class="text-white">Shop</span></li>
               </ul>
@@ -27,12 +27,12 @@
                     <div class="col-xl-3 col-lg-4">
                         <div class="shop-sidebar-widget">
                             <div class="single-widget widget-bg">
-                                <h2 class="wiget-title">Categories</h2>
+                                <h2 class="wiget-title">Danh mục</h2>
                                 <ul class="widget-categories-menu">
                                     @foreach($categories as $category)
                                     <li class="widget-categories-menu-list">
                                         <label class="widget-categories-menu-label d-flex align-items-center">
-                                            <img src="storage/uploads/product/no_image.jpg" alt="{{$category->categoryname}}">
+                                            <!-- <img src="storage/uploads/product/no_image.jpg" alt="{{$category->categoryname}}"> -->
                                             <span class="widget-categories-menu-text">{{$category->categoryname}}</span>
                                             <svg class="widget-categories-menu-arrowdown-icon" xmlns="http://www.w3.org/2000/svg" width="12.355"
                                                 height="8.394">
@@ -46,7 +46,7 @@
                                             @foreach($category->childs as $child)
                                             <li class="widget-categories-sub-menu-list">
                                                 <a href="{{$child->slug}}.htm" class="widget-categories-sub-menu-link d-flex align-items-center">
-                                                    <img src="storage/uploads/product/no_image.jpg" alt="{{$child->categoryname}}">
+                                                    <!-- <img src="storage/uploads/product/no_image.jpg" alt="{{$child->categoryname}}"> -->
                                                     <span class="widget-categories-sub-menu-text">{{$child->categoryname}}</span>
                                                     <svg class="widget-categories-menu-arrowdown-icon" xmlns="http://www.w3.org/2000/svg" width="12.355"
                                                         height="8.394">
@@ -64,12 +64,12 @@
                                 </ul>
                             </div>
                             <div class="single-widget widget-bg">
-                                <h2 class="wiget-title">Filter By Price</h2>
+                                <h2 class="wiget-title">Lọc theo giá</h2>
                                 <div class="price-filter-form-inner d-flex align-items-center">
                                     <div class="price-filter-group">
-                                        <label class="price-filter-label" for="">From</label>
+                                        <label class="price-filter-label" for="">Từ</label>
                                         <div class="price-filter-input d-flex align-items-center ">
-                                            <span class="price-filter-currency">$</span>
+                                            <span class="price-filter-currency">đ</span>
                                             <label>
                                                 <input value="{{request('min_price') ?? '' }}" type="number" name="min_price" placeholder="0" min="10" max="10000">
                                             </label>
@@ -79,19 +79,19 @@
                                         <span>-</span>
                                     </div>
                                     <div class="price-filter-group">
-                                        <label class="price-filter-label" for="">To</label>
+                                        <label class="price-filter-label" for="">Đến</label>
                                         <div class="price-filter-input d-flex align-items-center">
-                                            <span class="price-filter-currency">$</span>
+                                            <span class="price-filter-currency">đ</span>
                                             <label>
                                                 <input value="{{request('max_price') ?? '' }}" type="number" name="max_price" placeholder="1000.0" min="50" max="10000">
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-                                <button class="price-filer-btn primary-btn " type="submit">Filter</button>
+                                <button class="price-filer-btn primary-btn " type="submit">Lọc</button>
                             </div>
                             <div class="single-widget widget-bg">
-                                <h2 class="wiget-title">Brands</h2>
+                                <h2 class="wiget-title">Thương hiệu</h2>
                                 <ul>
                                     @foreach($brands as $brand)
                                     <li  class="widget-tagcloud-list">
@@ -159,7 +159,7 @@
                                 </ul>
                             </div>
                             <div class="single-widget widget-bg">
-                                <h2 class="wiget-title">Top Viewed Products</h2>
+                                <h2 class="wiget-title">Sản phẩm được xem nhiều nhất</h2>
                                 <div class="product-grid-inner">
                                 @foreach($topViewedProducts as $product)
                                     <div class="product-items product-items-grid d-flex align-items-center ">
@@ -176,11 +176,11 @@
                                                 <a href="/{{$product->slug}}.html">{{$product->productname}}</a>
                                             </div>
                                             <div class="product-items-price">
-                                                <span class="current-price">${{number_format($product->price_sale, 2)}}</span>
+                                                <span class="current-price">{{number_format($product->price_sale, 2)}}đ</span>
                                                 <span class="price-divided"></span>
-                                                <span class="old-price">${{number_format($product->price, 2)}}</span>
+                                                <span class="old-price">{{number_format($product->price, 2)}}đ</span>
                                             </div>
-                                            <span>View: {{$product->view_count}}</span>
+                                            <span>Xem: {{$product->view_count}}</span>
                                         </div>
                                     </div>
                                 @endforeach
@@ -192,15 +192,15 @@
                         <div class="shop-product-wrapper">
                             <div class="shop-product-header d-flex justify-content-between align-items-center">
                                 <div class="product-view-mode d-flex align-items-center">
-                                    <label class="product-view-label">Sort by :</label>
+                                    <label class="product-view-label">Xắp sếp theo :</label>
                                     <div class="select shop-product-header-select mr-30">
                                         <select name="sort_by" class="product-view-select" onchange="this.form.submit()">
-                                            <option {{request('sort_by') == 'latest' ? 'selected' : '' }} value="lastest">Latest</option>
-                                            <option {{request('sort_by') == 'oldest' ? 'selected' : '' }} value="oldest">Oldest</option>
-                                            <option {{request('sort_by') == 'name-ascending' ? 'selected' : '' }} value="name-ascending">Name A -> Z</option>
-                                            <option {{request('sort_by') == 'name-desending' ? 'selected' : '' }} value="name-desending">Name Z -> A </option>
-                                            <option {{request('sort_by') == 'price-ascending' ? 'selected' : '' }} value="price-ascending">Price Increase </option>
-                                            <option {{request('sort_by') == 'price-desending' ? 'selected' : '' }} value="price-desending">Price Decrease </option>
+                                            <option {{request('sort_by') == 'latest' ? 'selected' : '' }} value="lastest">Mới</option>
+                                            <option {{request('sort_by') == 'oldest' ? 'selected' : '' }} value="oldest">Cũ</option>
+                                            <option {{request('sort_by') == 'name-ascending' ? 'selected' : '' }} value="name-ascending">Tên A -> Z</option>
+                                            <option {{request('sort_by') == 'name-desending' ? 'selected' : '' }} value="name-desending">Tên Z -> A </option>
+                                            <option {{request('sort_by') == 'price-ascending' ? 'selected' : '' }} value="price-ascending">Tăng giá </option>
+                                            <option {{request('sort_by') == 'price-desending' ? 'selected' : '' }} value="price-desending">Giảm giá </option>
                                         </select>
                                     </div>
                                     <label class="product-view-label">Show:</label>

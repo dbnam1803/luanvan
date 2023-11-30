@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Services\Category\CategoryService;
 use App\Http\Services\Login\LoginService;
-use Validator;
-use Auth;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -44,7 +44,7 @@ class LoginController extends Controller
         if($result == true){
             return redirect('/');
         }
-        return back()->with('error','ERORR: Incorrect email or password, or your account has been locked ');
+        return back()->with('error','LỖI: Email hoặc mật khẩu không chính xác hoặc tài khoản của bạn đã bị khóa ');
     }
 
     public function register(){
@@ -66,8 +66,8 @@ class LoginController extends Controller
             'password'=> 'required|confirmed|min:6',
             'password_confirmation' =>'required'
         ], [
-            'email.unique' => 'This email is already in use.',
-            'phonenumber.numeric' => 'Phone number must include digits.',
+            'email.unique' => 'Email này đã được sử dụng.',
+            'phonenumber.numeric' => 'số điện thoại phải bao gồm các chữ số.',
         ]);
 
         if ($validator->fails()) {
@@ -76,7 +76,7 @@ class LoginController extends Controller
         
         $result = $this->loginService->checkRegister($request);
         if($result == true){
-            return redirect('login')->with('success', 'Your account created successfully!');
+            return redirect('login')->with('success', 'Tài khoản của bạn đã được tạo thành công!');
         }
     }
     public function logout(Request $request){

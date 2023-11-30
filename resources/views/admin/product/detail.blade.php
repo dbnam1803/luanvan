@@ -8,14 +8,14 @@
     <div class="details details2">
         <div class="recentOrders">
             <div class="cardHeader">
-                <h2>Product Information #{{$product->id}}</h2>
+                <h2>Thông tin sản phẩm #{{$product->id}}</h2>
             </div>
             <div class="row formProduct justify-content-center">
                 <div class="col-7" style="font-size: 20px;">
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4 text-end">
-                                <label>Product Image:</label>
+                                <label>Hình ảnh sản phẩm:</label>
                             </div>
                             <div class="col-8">
                                 <div>
@@ -29,17 +29,17 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4 text-end">
-                                <label>Product Details:</label>
+                                <label>Thông tin chi tiết sản phẩm:</label>
                             </div>
                             <div class="col-8">
-                                <a class="btn" href="admin/product/{{$product->id}}/detail">Manage details</a>
+                                <a class="btn" href="admin/product/{{$product->id}}/detail">Quản lý chi tiết</a>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4 text-end">
-                                <label>Product Name:</label>
+                                <label>Tên sản phẩm:</label>
                             </div>
                             <div class="col-8">
                                 <div >{{$product->productname}}</div>
@@ -49,7 +49,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4 text-end">
-                                <label>Category:</label>
+                                <label>Loại:</label>
                             </div>
                             <div class="col-8">
                                 <div >{{$product->category->categoryname}}</div>
@@ -59,7 +59,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4 text-end">
-                                <label>Brand:</label>
+                                <label>Thương hiệu:</label>
                             </div>
                             <div class="col-8">
                                 <div >{{$product->brand->brandname}}</div>
@@ -69,7 +69,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4 text-end">
-                                <label>Price:</label>
+                                <label>Gía:</label>
                             </div>
                             <div class="col-8">
                                 <div>${{$product->price}}</div>
@@ -79,7 +79,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4 text-end">
-                                <label>Price Sale:</label>
+                                <label>Gía Sale:</label>
                             </div>
                             <div class="col-8">
                                 <div>${{$product->price_sale}}</div>
@@ -89,7 +89,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4 text-end">
-                                <label>Quantity:</label>
+                                <label>Số lượng:</label>
                             </div>
                             <div class="col-8">
                                 <div >{{$product->quantity}}</div>
@@ -109,7 +109,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4 text-end">
-                                <label>Featured:</label>
+                                <label>Đặc sắc:</label>
                             </div>
                             <div class="col-8">
                                 <div >{{note($product->featured)}}</div>
@@ -119,7 +119,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4 text-end">
-                                <label>Trending:</label>
+                                <label>Xu hướng:</label>
                             </div>
                             <div class="col-8">
                                 <div >{{note($product->trending)}}</div>
@@ -129,7 +129,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4 text-end">
-                                <label>New Arrival:</label>
+                                <label>Hàng mới về:</label>
                             </div>
                             <div class="col-8">
                                 <div >{{note($product->newarrival)}}</div>
@@ -139,7 +139,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4 text-end">
-                                <label>Created By:</label>
+                                <label>Tạo bởi:</label>
                             </div>
                             <div class="col-8">
                                 <div >{{$product->user->fullname}}</div>
@@ -149,7 +149,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4 text-end">
-                                <label>Created At:</label>
+                                <label>Ngày tạo:</label>
                             </div>
                             <div class="col-8">
                                 <div >{{$product->created_at}}</div>
@@ -159,7 +159,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4 text-end">
-                                <label>Description:</label>
+                                <label>Miêu tả:</label>
                             </div>
                             <div class="col-8">
                                 <div> {!! $product->description !!}</div>

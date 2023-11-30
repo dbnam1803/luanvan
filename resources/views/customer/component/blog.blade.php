@@ -1,4 +1,4 @@
-    <section class="blog-section section-padding pt-0">
+    <!-- <section class="blog-section section-padding pt-0">
       <div class="my-container">
         <div class="section-heading text-center">
           <h2 class="section-heading-title">From The Blog</h2>
@@ -94,4 +94,4 @@
           <div class="swiper-nav-btn swiper-button-prev color-main"></div>
         </div>
       </div>
-    </section>
+    </section> -->

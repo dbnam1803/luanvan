@@ -17,13 +17,13 @@
         </div>
         <div class="product-items-price">
             @if ($product->price_sale != 0)
-            <span style="color: #ee2761; font-size: 18px" class="current-price">${{number_format($product->price_sale,
-                2)}}</span>
+            <span style="color: #ee2761; font-size: 18px" class="current-price">{{number_format($product->price_sale,
+                2)}}đ</span>
             <span class="price-divided"></span>
-            <span class="old-price">${{number_format($product->price, 2)}}</span>
+            <span class="old-price">{{number_format($product->price, 2)}}đ</span>
             @else
-            <span style="color: #ee2761; font-size: 18px" class="current-price">${{number_format($product->price_sale,
-                2)}}</span>
+            <span style="color: #ee2761; font-size: 18px" class="current-price">{{number_format($product->price_sale,
+                2)}}đ</span>
             @endif
 
         </div>
@@ -90,7 +90,7 @@
                         <circle cx="256" cy="256" r="80" fill="none" stroke="currentColor" stroke-miterlimit="10"
                             stroke-width="32"></circle>
                     </svg>
-                    <span>View</span>
+                    <span>Xem</span>
                 </a>
             </li>
 
@@ -104,7 +104,7 @@
                                 fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="32"></path>
                         </svg>
-                        <span>Added to wishlist</span>
+                        <span>Thêm yêu thích</span>
                     </button>
                 @else
                     <button type="button" class="add-to-wishlist {{$product->id}}" onclick="addWishList({{$product->id}})" >
@@ -114,7 +114,7 @@
                                 fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="32"></path>
                         </svg>
-                        <span>Add to wishlist</span>
+                        <span>Thêm yêu thích</span>
                     </button>
                 @endif
             @else
@@ -125,7 +125,7 @@
                                 fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="32"></path>
                         </svg>
-                        <span>Add to wishlist</span>
+                        <span>Thêm yêu thích</span>
                     </button>
             @endif    
             </li>

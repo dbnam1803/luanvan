@@ -8,7 +8,7 @@
             <div class="card">
                 <div>
                     <div class="numbers">{{$count['product']}}</div>
-                    <div class="cardName">Products</div>
+                    <div class="cardName">Sản phẩm</div>
                 </div>
                 <div class="iconBx">
                     <ion-icon name="file-tray-stacked-outline"></ion-icon>
@@ -17,7 +17,7 @@
             <div class="card">
                 <div>
                     <div class="numbers">{{$count['customer']}}</div>
-                    <div class="cardName">Customers</div>
+                    <div class="cardName">Khách hàng</div>
                 </div>
                 <div class="iconBx">
                     <ion-icon name="person-circle-outline"></ion-icon>
@@ -26,7 +26,7 @@
             <div class="card">
                 <div>
                     <div class="numbers">{{$count['order']}}</div>
-                    <div class="cardName">Orders</div>
+                    <div class="cardName">Đơn hàng</div>
                 </div>
                 <div class="iconBx">
                     <ion-icon name="document-text-outline"></ion-icon>   
@@ -35,7 +35,7 @@
             <div class="card">
                 <div>
                     <div class="numbers">${{number_format($earn, 0)}}</div>
-                    <div class="cardName">Earning</div>
+                    <div class="cardName">Thu nhập</div>
                 </div>
                 <div class="iconBx">
                     <ion-icon name="cash-outline"></ion-icon>
@@ -47,17 +47,17 @@
             <!-- oder details list -->
             <div class="recentOrders">
                 <div class="cardHeader">
-                    <h2>Recent Orders</h2>
-                    <a href="admin/order" class="btn">View All</a>
+                    <h2>Đơn đặt hàng</h2>
+                    <a href="admin/order" class="btn">Tất cả</a>
                 </div>
                 <table>
                     <thead>
                         <tr>
                             <td>ID</td>
-                            <td>Name</td>
-                            <td>Price</td>
-                            <td>Payment</td>
-                            <td>Status</td>
+                            <td>Tên</td>
+                            <td>Giá</td>
+                            <td>Thanh toán</td>
+                            <td>Trạng thái</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -68,15 +68,15 @@
                             <td>${{number_format($order->total_price, 2)}}</td>
                             <td class="text-uppercase">{{$order->payment}}</td>
                             @if($order->status == 0)
-                            <td><span class="status pending">Pending</span></td>
+                            <td><span class="status pending">Chưa xử lý</span></td>
                             @elseif($order->status == 1)
-                            <td><span class="status inprogress">In Progress</span></td>
+                            <td><span class="status inprogress">Trong tiến trình</span></td>
                             @elseif($order->status == 2)
-                            <td><span class="status delivered">Delivered</span></td>
+                            <td><span class="status delivered">Đã giao hàng</span></td>
                             @elseif($order->status == 3)
-                            <td><span class="status return">Return</span></td>
+                            <td><span class="status return">Trả hàng</span></td>
                             @else
-                            <td><span class="status cancel">Cancel</span></td>
+                            <td><span class="status cancel">Hủy</span></td>
                             @endif
                         </tr>
                         @endforeach
@@ -86,7 +86,7 @@
             <!-- New Customers -->
             <div class="recentCustomers">
                 <div class="cardHeader">
-                    <h2>Recent Customers</h2>
+                    <h2>Khách hàng gần đây</h2>
                 </div>
                 <table>
                     @foreach($customers as $customer)

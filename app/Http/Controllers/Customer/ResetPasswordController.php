@@ -5,9 +5,10 @@ namespace App\Http\Controllers\Customer;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Mail;
-use Hash;
-use Auth;
+
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Category;
 use App\Models\User;
 
@@ -34,7 +35,7 @@ class ResetPasswordController extends Controller
                 DB::table('password_resets')->updateOrInsert(['email' => $email], ['token' => $token]);
 
                 Mail::send('customer.main.reset_password_email', compact('token'), function ($message) use ($email) {
-                    $message->from(env('MAIL_USERNAME'), 'Stable eShop');
+                    $message->from(env('MAIL_USERNAME'), 'Kenta shop');
                     $message->to($email);
                     $message->subject('Reset Password');
                 });
@@ -63,6 +64,6 @@ class ResetPasswordController extends Controller
         $user->password = Hash::make($request->input('password'));
         $user->save();
 
-        return redirect('/login')->with('success','Password reset successful!');
+        return redirect('/login')->with('success','Đặt lại mật khẩu thành công!');
     }
 }

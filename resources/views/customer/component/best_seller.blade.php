@@ -3,7 +3,7 @@
     <section class="product-section section-padding pt-0">
       <div class="my-container">
         <div class="section-heading text-center">
-          <h2 class="section-heading-title">Our Best Seller</h2>
+          <h2 class="section-heading-title">Bán chạy nhất</h2>
         </div>
         <div class="product-section-inner product-swiper swiper">
           <div class="swiper-wrapper">

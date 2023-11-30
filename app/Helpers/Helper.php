@@ -1,7 +1,7 @@
 <?php     
 
     function gender($gender){
-        return $gender == 0 ? 'Male' : 'Female';
+        return $gender == 0 ? 'Nam' : 'Nữ';
     }
 
     function level($level){
@@ -10,10 +10,10 @@
             return 'Admin';
         }
         elseif($level == 1){
-            return 'Employee';
+            return 'Nhân viên';
         }
         else{
-            return 'Customer' ;
+            return 'Khách hàng' ;
         }
     }
 

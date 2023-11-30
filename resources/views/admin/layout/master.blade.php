@@ -22,62 +22,62 @@
                     <li class="{{(request()->segment(2) == 'home') ? 'hovered' : ''}}">
                         <a href="/admin/home">
                             <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                            <span class="title">Dashboard</span>
+                            <span class="title">Trang chủ</span>
                         </a>
                     </li>
                     <li class="{{(request()->segment(2) == 'statistic') ? 'hovered' : ''}}" id="statistic">
                         <a href="./admin/statistic">
                             <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
-                            <span class="title">Statistics</span>
+                            <span class="title">Thống kê</span>
                         </a>
                     </li>
                     <li class="{{(request()->segment(2) == 'category') ? 'hovered' : ''}}">
                         <a href="./admin/category">
                             <span class="icon"><ion-icon name="reader-outline"></ion-icon></span>
-                            <span class="title">Category</span>
+                            <span class="title">Danh mục</span>
                         </a>
                     </li>
                     <li class="{{(request()->segment(2) == 'product') ? 'hovered' : ''}}">
                         <a href="./admin/product">
                             <span class="icon"><ion-icon name="shirt-outline"></ion-icon></span>
-                            <span class="title">Products</span>
+                            <span class="title">Sản phẩm</span>
                         </a>
                     </li>
                     <li  class="{{(request()->segment(2) == 'brand') ? 'hovered' : ''}}">
                         <a href="./admin/brand">
                             <span class="icon"><ion-icon name="cube-outline"></ion-icon></ion-icon></span>
-                            <span class="title">Brand</span>
+                            <span class="title">Thương hiệu</span>
                         </a>
                     </li>
                     <li  class="{{(request()->segment(2) == 'customer') ? 'hovered' : ''}}">
                         <a href="./admin/customer">
                             <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
-                            <span class="title">Customers</span>
+                            <span class="title">Khách hàng</span>
                         </a>
                     </li>
                     <li  class="{{(request()->segment(2) == 'order') ? 'hovered' : ''}}">
                         <a href="./admin/order">
                             <span class="icon"><ion-icon name="cart-outline"></ion-icon></span>
-                            <span class="title">Orders</span>
+                            <span class="title">Đơn hàng</span>
                         </a>
                     </li>
                     <li  class="{{(request()->segment(2) == 'user') ? 'hovered' : ''}}">
                         <a href="./admin/user">
                             <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                            <span class="title">Employees</span>
+                            <span class="title">Nhân viên</span>
                         </a>
                     </li>
                     <hr style="color: white">
                     <li  class="{{(request()->segment(2) == 'profile') ? 'hovered' : ''}}">
                         <a href="/admin/profile">
                             <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
-                            <span class="title">Profile</span>
+                            <span class="title">Hồ sơ</span>
                         </a>
                     </li>
                     <li  class="{{(request()->segment(2) == 'password') ? 'hovered' : ''}}">
                         <a href="admin/password">
                             <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                            <span class="title">Password</span>
+                            <span class="title">Mật khẩu</span>
                         </a>
                     </li>
                 </ul>
@@ -92,7 +92,7 @@
                     <!-- search -->
                     <div class="search">
                         <label for="">
-                            <input type="text" placeholder="Search here">
+                            <input type="text" placeholder="Tìm kiếm..">
                             <ion-icon name="search-outline"></ion-icon>
                         </label>
                     </div>
@@ -103,7 +103,7 @@
                             <div class="user-name--inner">{{Auth::user()->fullname}}</div>
                             <form action="{{route ('logout')}}" method="POST">
                                 @csrf
-                                <button type="submit" class="user-logout">Log Out</button>
+                                <button type="submit" class="user-logout">Đăng xuất</button>
                             </form>
                         </div>
                         @endif

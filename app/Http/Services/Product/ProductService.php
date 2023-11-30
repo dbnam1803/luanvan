@@ -7,7 +7,7 @@ use App\Models\Product;
 use App\Models\ProductDetail;
 use App\Models\Brand;
 use App\Models\Category;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use DB;
 use Illuminate\Http\Request;
 

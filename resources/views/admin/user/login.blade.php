@@ -25,15 +25,15 @@
                 </div>
             @endif
                 <div class="account-login-header">
-                    <h2 class="text-center">Login</h2>
+                    <h2 class="text-center">Đăng nhập</h2>
                 </div>
                 @include('admin.component.alert')
                 <div class="account-login-inner">
-                    <input class="account-login-input" name="email" placeholder="Email Addres" type="email">
-                    <input class="account-login-input" name="password" placeholder="Password" type="password">
+                    <input class="account-login-input" name="email" placeholder="Địa chỉ email" type="email">
+                    <input class="account-login-input" name="password" placeholder="Mật khẩu" type="password">
                     
                 </div>
-                <button class="account-login-btn btn" type="submit">Login</button>
+                <button class="account-login-btn btn" type="submit">Đăng nhập</button>
             </div>
         </form>            
     </section>

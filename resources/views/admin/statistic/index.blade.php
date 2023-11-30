@@ -6,7 +6,7 @@
     <div class="details">
         <div class="recentOrders">
             <div class="cardHeader">
-                <h2>Sales Statistics</h2>
+                <h2>Thống kê bán hàng</h2>
             </div>
             <div>
                 <canvas id="chartSales"></canvas>
@@ -14,18 +14,18 @@
         </div>
         <div class="recentOrders">
             <div class="cardHeader">
-                <h2>Order Statistics</h2>
+                <h2>Thống kê đơn hàng</h2>
             </div>
             <div class="text-center">
                 <canvas style="padding: 20px" id="pieChart"></canvas>
-                <strong>Total: {{ array_sum($pieChartData)}} orders</strong>
+                <strong>TỔNG: {{ array_sum($pieChartData)}} đơn hàng</strong>
             </div>
         </div>
     </div>
     <div class="details details3">
         <div class="recentOrders">
             <div class="cardHeader">
-                <h2>Revenue</h2>
+                <h2>Doanh thu</h2>
                 <form action="/admin/statistic">
                     <select name="year" id="year" onchange="this.form.submit();">
                         <option {{request('year') == date("Y") ? 'selected' : '' }}  value=" {{date("Y")}}">{{date("Y")}}</option>
@@ -39,12 +39,12 @@
             </div>
         </div>
         <div class="recentOrders ">
-            <div class="cardHeader">
+            <!-- <div class="cardHeader">
                 <h2>Summary</h2>
             </div>
             <div>
                 <canvas id=""></canvas>
-            </div>
+            </div> -->
         </div>
     </div>
     
@@ -57,10 +57,10 @@
         const dates = <?php echo json_encode($barCharData['date']) ?>
         // Bar chart Sale
         createBarChar(document.querySelector('#chartSales'), dates, 'Orders', dataSales)
-        const month = ['Jan', 'Feb', 'Mar', 'Apr','May','Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        const month = ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4','Tháng 5','Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12']
         const revenue = <?php echo json_encode($barCharData['revenue']) ?>
         //Bar chart Revenue
-        createBarChar(document.querySelector('#chartRevenue'), month, 'USD', revenue)
+        createBarChar(document.querySelector('#chartRevenue'), month, 'vnd', revenue)
 
         function createBarChar(query, label, labelName, data){
             new Chart(query, {
@@ -88,7 +88,7 @@
         new Chart(document.querySelector('#pieChart'), {
             type: 'pie',
             data: {
-                labels: ['Pending', 'In Progress', 'Delivered', 'Return', 'Cancel'],
+                labels: ['Chưa xử lý', 'Trong tiến trình', 'Đã giao hàng', 'Trả hàng', 'Hủy'],
                 datasets: [{
                     label: 'Orders',
                     data: <?php echo json_encode($pieChartData) ?>,

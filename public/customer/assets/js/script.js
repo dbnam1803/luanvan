@@ -266,15 +266,15 @@ $(document).ready( function(){
           window.location.href = "/login"
         }
         else if(result == 'error'){
-          createNotify('error','Exceeded the number of products!');
+          createNotify('error','Đã vượt quá số lượng sản phẩm!');
         }
         else{
           $('.mycart').text(result)
-          createNotify('success','Product added to cart');
+          createNotify('success','Sản phẩm đã được thêm vào giỏ hàng');
         }
         
       }, error:function(){
-        createNotify('error','Add to cart failed');
+        createNotify('error','Sản phẩm không được thêm vào giỏ hàng');
       }
     })
 
@@ -296,8 +296,8 @@ $(document).ready( function(){
 
         if(result == true){
           element.find('input').hide()
-          $('.account-login-header p').text('An email has been sent to your email address. Follow the instructions in the email to reset your password.')
-          element.html('<a href="/login" style="width: 100%; border-radius: 5px;" class="primary-btn text-center">Back To Login</a>')
+          $('.account-login-header p').text('Một email đã được gửi đến địa chỉ email của bạn. Hãy làm theo hướng dẫn trong email để đặt lại mật khẩu của bạn.')
+          element.html('<a href="/login" style="width: 100%; border-radius: 5px;" class="primary-btn text-center">Quay lại đăng nhập</a>')
         }
         else{
           element.find('input').css('border','1px solid red')
@@ -349,9 +349,9 @@ function removeCart(cartItem_id){
       var cart_exist = cart_tbody.find(".cartItem_id-" + cartItem_id)
       cart_exist.remove();
         
-      createNotify('success','Cart deleted successfully')
+      createNotify('success','Giỏ hàng đã được xóa thành công')
     }, error:function(){
-      createNotify('error','Delete cart failed');
+      createNotify('error','Xóa giỏ hàng không thành công');
     }
   })
 }
@@ -385,10 +385,10 @@ function updateCart(cartItem_id, quantity){
         $('.subTotal').text('$' + result['subTotal'].toFixed(2))
         $('.grandTotal').text('$' + result['subTotal'].toFixed(2))
           
-        createNotify('success','Cart updated successfully')
+        createNotify('success','Cập nhật giỏ hàng thành công')
       }
     }, error:function(){
-      createNotify('error','Update cart failed');
+      createNotify('error','Cập nhật giỏ hàng không thành công');
     }
   })
 }
@@ -408,10 +408,10 @@ function clearCart(){
         $('.subTotal').text('$0.00');
         $('.grandTotal').text('$0.00');
         $('.cart-summary-footer-btn.checkout').attr('data-qty', 0)
-        createNotify('success','Cart deleted successfully')
+        createNotify('success','Giỏ hàng đã được xóa thành công')
 
     }, error:function(){
-      createNotify('error','Clear cart failed');
+      createNotify('error','Xóa giỏ hàng không thành công');
     }
   })
 }
@@ -431,15 +431,15 @@ function addWishList(product_id){
       var btnAdd = $('.add-to-wishlist.' + product_id);
       btnAdd.attr('onclick','removeWishList(' + product_id + ')');
       btnAdd.addClass('added');
-      btnAdd.children('span').text('Added to wishlist');
+      btnAdd.children('span').text('Thêm yêu thích');
 
       // Button add WishList on Product Detail
       var btnAdd_PD = $('.variant-wishlist-btn.' + product_id);
       btnAdd_PD.attr('onclick','removeWishList(' + product_id + ')');
       btnAdd_PD.addClass('added');
-      btnAdd_PD.children('span').text('Added to wishlist');
+      btnAdd_PD.children('span').text('Thêm yêu thích');
 
-      createNotify('success','Product added to wishlist');
+      createNotify('success','Sản phẩm đã được thêm vào danh sách yêu thích');
       
     }, error:function(){
       window.location.href = '/login' 
@@ -463,23 +463,23 @@ function removeWishList(product_id){
       btnAdd = $('.add-to-wishlist.' + product_id)
       btnAdd.attr('onclick','addWishList(' + product_id + ')')
       btnAdd.removeClass('added');
-      btnAdd.children('span').text('Add to wishlist');
+      btnAdd.children('span').text('Thêm yêu thích');
 
       // Button add WishList on Product Detail
       var btnAdd_PD = $('.variant-wishlist-btn.' + product_id);
       btnAdd_PD.attr('onclick','addWishList(' + product_id + ')');
       btnAdd_PD.removeClass('added');
-      btnAdd_PD.children('span').text('Add to wishlist');
+      btnAdd_PD.children('span').text('Thêm yêu thích');
 
       // Remove row in table
       var wishList_tbody = $('.cart-table-inner tbody')
       var wish_list = wishList_tbody.find('.prodId-' + product_id)
       wish_list.remove();
 
-      createNotify('success','Product removed from wishlist');
+      createNotify('success','Sản phẩm đã bị xóa khỏi danh sách yêu thích');
       
     }, error:function(){
-      createNotify('error','Remove product failed!');
+      createNotify('error','Xóa sản phẩm không thành công!');
     }
   })
 }
@@ -490,7 +490,7 @@ var checkoutBtn = $('.cart-summary-footer-btn.checkout')
 checkoutBtn.click(function(){
   var count_cart = $(this).attr('data-qty')
   if(count_cart == 0){
-    createNotify('error', 'Your shopping cart must have least one product!' )
+    createNotify('error', 'Giỏ hàng của bạn phải có ít nhất một sản phẩm!' )
   }
   else{
     window.location.href = '/checkout'
@@ -510,28 +510,28 @@ function updateStatus(order_id, status){
       console.log(statusCol)
       // return = 4
       if(status == 4){
-        statusCol.html('<span class="status cancel">Cancel</span>')
+        statusCol.html('<span class="status cancel">Hủy</span>')
         orderRow.find('.btn.cancel').hide();
-        createNotify('success', 'Order has been cancelled!' )
+        createNotify('success', 'Đơn hàng đã bị hủy!' )
       }
       // delivered = 2
       else if(status == 2){
-        statusCol.html('<span class="status delivered">Delivered</span>')
+        statusCol.html('<span class="status delivered">Đã giao hàng</span>')
         orderRow.find('.btn.return').hide();
         orderRow.find('.btn.received').hide();
-        createNotify('success', 'Order has been received!' )
+        createNotify('success', 'đơn hàng đã được nhận!' )
         orderRow.children('td:nth-child(3)').text('Paid')
       }
       //return = 3
       else{
-        statusCol.html('<span class="status return">Return</span>')
+        statusCol.html('<span class="status return">Trả hàng</span>')
         orderRow.find('.btn.return').hide();
         orderRow.find('.btn.received').hide();
-        createNotify('success', 'Order has been returned!' )
+        createNotify('success', 'Đơn hàng đã được trả lại!' )
       }
     },
     error:function(){
-      createNotify('error', 'Update order failed!' )
+      createNotify('error', 'Lệnh cập nhật không thành công!' )
     }
   })
 }

@@ -19,18 +19,14 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-content">
-                        <span class="about-content-title mb-20"> Why Choose us</span>
-                        <h2 class="mb-25">We do not buy from the open market & traders.</h2>
-                        <p class="mb-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit illo, est
-                            repellendus are quia voluptate neque reiciendis ea placeat labore maiores cum, hic
-                            ducimus ad a dolorem soluta consectetur adipisci. Perspiciatis quas ab quibusdam is.</p>
-                        <p class="mb-25">Itaque accusantium eveniet a laboriosam dolorem? Magni suscipit est corrupti explicabo non
-                            perspiciatis, excepturi ut asperiores assumenda rerum? Provident ab corrupti sequi, voluptates repudiandae eius odit
-                            aut.</p>
+                        <span class="about-content-title mb-20"> Tại sao chọn chúng tui</span>
+                        
+                        <p class="mb-20">Với tất cả sự chân thành, KENTA cảm ơn bạn đã lựa chọn sản phẩm của chúng tôi để thể hiện phong cách của mình. Chúng tôi tin rằng mỗi mũi khâu trong sản phẩm sẽ dệt nên những điều không thể tưởng tượng được, những điều sẽ vượt qua khoảng cách thế hệ, giới tính, biên giới... để giúp bạn chứng minh rằng PHONG CÁCH SỐNG của mình thật tuyệt vời biết bao.</p>
+                        
                     </div>
                     <div class="about-author d-flex align-items-center">
                         <div class="about-author-left">
-                            <h4>Bruce Sutton</h4>
+                            <h4>DBN</h4>
                             <span>CEO - Founder</span>
                         </div>
                         <img src="/customer/assets/img/sign.png" alt="signature">
@@ -45,30 +41,30 @@
                 <div class="col">
                     <div class="counterup-banner-inner d-flex align-items-center justify-content-between">
                         <div class="counterup-banner-items text-center">
-                            <h2 class="text-white">YEARS OF
+                            <h2 class="text-white">NĂM
                                 <br>
-                                FOUNDATION
+                                THÀNH LẬP
                             </h2>
                             <span class="text-white js-counter" data-count="25">0</span>
                         </div>
                         <div class="counterup-banner-items text-center">
-                            <h2 class="text-white">SKILLED TEAM
+                            <h2 class="text-white">THÀNH VIÊN NHÓM CÓ
                                 <br>
-                                MEMBERS
+                               KỸ NĂNG
                             </h2>
                             <span class="text-white js-counter" data-count="70">0</span>
                         </div>
                         <div class="counterup-banner-items text-center">
-                            <h2 class="text-white">HAPPY
+                            <h2 class="text-white">KHÁCH HÀNG
                                 <br>
-                                CUSTOMERS
+                                HẠNH PHÚC
                             </h2>
                             <span class="text-white js-counter" data-count="250">0</span>
                         </div>
                         <div class="counterup-banner-items text-center">
-                            <h2 class="text-white">MONTHLY
+                            <h2 class="text-white">ĐƠN HÀNG
                                 <br>
-                                ORDERS
+                                TRÊN THÁNG
                             </h2>
                             <span class="text-white js-counter" data-count="300">0</span>
                         </div>  

@@ -16,7 +16,7 @@
             <div class="info-account">
                 <div class="row align-items-center">
                     <div class="col-3 text-right">
-                        <label for="fullname">Full Name</label>
+                        <label for="fullname">Tên</label>
                     </div>
                     <div class="col-9 text-start">
                         <input class="form-control" type="text" name="fullname" id="fullname" value="{{Auth::user()->fullname}}">
@@ -26,7 +26,7 @@
             <div class="info-account">
                 <div class="row align-items-center">
                     <div class="col-3 text-right">
-                        <label for="phonenumber">Phone Number</label>
+                        <label for="phonenumber">số điện thoại</label>
                     </div>
                     <div class="col-9 text-start">
                         <input class="form-control" type="text" name="phonenumber" id="phonenumber" value="{{Auth::user()->phonenumber}}">
@@ -36,12 +36,12 @@
             <div class="info-account">
                 <div class="row align-items-center">
                     <div class="col-3 text-right">
-                        <label for="gender">Gender</label>
+                        <label for="gender">Giới tính</label>
                     </div>
                     <div class="col-9 text-start">
                         <select class="form-select" name="gender" id="gender">
-                            <option {{ Auth::user()->gender == 0 ? 'selected' : '' }} value="0">Male</option>
-                            <option {{ Auth::user()->gender == 1 ? 'selected' : '' }} value="1">Female</option>
+                            <option {{ Auth::user()->gender == 0 ? 'selected' : '' }} value="0">Nam</option>
+                            <option {{ Auth::user()->gender == 1 ? 'selected' : '' }} value="1">Nữ</option>
                         </select>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
             <div class="info-account">
                 <div class="row align-items-center">
                     <div class="col-3 text-right">
-                        <label for="address">Address</label>
+                        <label for="address">Địa chỉ</label>
                     </div>
                     <div class="col-9 text-start">
                         <input class="form-control" type="text" name="address" id="address" value="{{Auth::user()->address}}">
@@ -59,7 +59,7 @@
             <div class="info-account">
                 <div class="row align-items-center">
                     <div class="col-3 text-right">
-                        <label for="country">Country</label>
+                        <label for="country">Quốc gia</label>
                     </div>
                     <div class="col-9 text-start">
                         <input class="form-control" type="text" name="country" id="country" value="{{Auth::user()->country}}">
@@ -78,7 +78,7 @@
             </div>
             <div class="info-account-btn text-end">
                 <div class="col-9">
-                    <button type="submit">Save</button>
+                    <button type="submit">Lưu</button>
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@
                     <img src="/{{ Auth::user()->avatar ?? 'storage/uploads/user/no_avatar.png'}}" id="user-avatar" alt="user-avatar">
                 </div>
                 <div class="user-avatar-btn">
-                    <label for="avatar">Choose Image
+                    <label for="avatar">Chọn hình ảnh
                         <input onchange="previewImg(this,'user-avatar')" type="file" name="image" id="avatar">
                     </label>
                 </div>

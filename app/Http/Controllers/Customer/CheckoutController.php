@@ -40,7 +40,7 @@ class CheckoutController extends Controller
 
         // Payment Method - COD
         if($result == true){
-            return redirect('checkout/noti')->with('notification', 'We received your purchase request. Please check your email!' );
+            return redirect('checkout/noti')->with('notification', 'Chúng tôi đã nhận được yêu cầu mua hàng của bạn. Vui lòng kiểm tra email của bạn!' );
         }
         
     }

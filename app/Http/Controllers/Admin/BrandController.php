@@ -33,7 +33,7 @@ class BrandController extends Controller
 
         $this->brandService->create($request);
 
-        return redirect('admin/brand/create') -> with('success','SUCCESS: New brand was successfully added!');
+        return redirect('admin/brand/create') -> with('success','Thương hiệu mới đã được thêm thành công!');
     } 
 
     public function show(Brand $brand){
@@ -44,7 +44,7 @@ class BrandController extends Controller
     public function update(Request $request, Brand $brand){
         
         $this->brandService->update($request, $brand);
-        return redirect('admin/brand') -> with('success','SUCCESS: Brand was successfully edited!');
+        return redirect('admin/brand') -> with('success','Thương hiệu đã được chỉnh sửa thành công!');
     }
 
     public function destroy($id){
@@ -52,7 +52,7 @@ class BrandController extends Controller
         $result = $this->brandService->destroy($id);   
 
         if($result){
-            return redirect('admin/brand')->with('success','SUCCESS: Brand was successfully deleted!');
+            return redirect('admin/brand')->with('success','Thương hiệu đã được xóa thành công!');
         }
     }
 }

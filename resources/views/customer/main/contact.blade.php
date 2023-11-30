@@ -7,35 +7,35 @@
     <section class="contact-section section-padding">
         <div class="my-container2">
             <div class="section-heading text-center">
-                <h2 class="section-heading-title">Get In Touch</h2>
+                <h2 class="section-heading-title">LIÊN HỆ</h2>
             </div>
             <div class="main-contact-area position-relative">
                 <div class="contact-form">
-                    <h3 class="contact-form-title mb-30">Contact Us</h3>
+                    <h3 class="contact-form-title mb-30">Liên hệ</h3>
                     <form class="contact-form-inner" action="#">
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
                                 <div class="contact-form-list mb-20">
-                                    <label class="contact-form-label" for="firstname">First Name 
+                                    <label class="contact-form-label" for="firstname">Tên
                                         <span class="contact-form-label-star">*</span>
                                     </label>
-                                    <input class="contact-form-input" name="firstname" id="firstname" placeholder="Your First Name" type="text">
+                                    <input class="contact-form-input" name="firstname" id="firstname" placeholder="Nhập tên" type="text">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="contact-form-list mb-20">
-                                    <label class="contact-form-label" for="lastname">Last Name 
+                                    <label class="contact-form-label" for="lastname">Họ
                                         <span class="contact-form-label-star">*</span>
                                     </label>
-                                    <input class="contact-form-input" name="firstname" id="lastname" placeholder="Your Last Name" type="text">
+                                    <input class="contact-form-input" name="firstname" id="lastname" placeholder="Nhập họ" type="text">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="contact-form-list mb-20">
-                                    <label class="contact-form-label" for="phonenumber">Phone Number 
+                                    <label class="contact-form-label" for="phonenumber">Só điện thoại
                                         <span class="contact-form-label-star">*</span>
                                     </label>
-                                    <input class="contact-form-input" name="firstname" id="phonenumber" placeholder="Phone Number" type="text">
+                                    <input class="contact-form-input" name="firstname" id="phonenumber" placeholder="Nhập số điện thoại" type="text">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
@@ -48,19 +48,19 @@
                             </div>
                             <div class="col-12">
                                 <div class="contact-form-list mb-15">
-                                    <label class="contact-form-label" for="message">Write Your Message
+                                    <label class="contact-form-label" for="message">Viết tin nhắn của bạn
                                         <span class="contact-form-label-star">*</span>
                                     </label>
-                                    <textarea class="contact-form-textarea" name="message" id="message" placeholder="Write Your Message"></textarea>
+                                    <textarea class="contact-form-textarea" name="message" id="message" placeholder="Viết tin nhắn của bạn"></textarea>
                                 </div>
                             </div>
                         </div>
-                        <button class="contact-form-btn primary-btn" type="submit">Submit Now</button>
+                        <button class="contact-form-btn primary-btn" type="submit">Gữi</button>
                     </form>
                 </div>
                 <div class="contact-info">
                     <div class="contact-info-item">
-                        <h3 class="contact-info-content-title text-white mb-15">Phone Number</h3>
+                        <h3 class="contact-info-content-title text-white mb-15">SỐ ĐIỆN THOẠI</h3>
                         <div class="contact-info-item-inner d-flex align-items-center">
                             <div class="contact-info-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="31.568" height="31.128" viewBox="0 0 31.568 31.128">
@@ -71,15 +71,15 @@
                             </div>
                             <div class="contact-info-content">
                                 <p class="contact-info-content-desc text-white">
-                                    <a href="tel:+84899845567">+84899845567</a>
+                                    <a href="tel:+84899845567">+84809090909</a>
                                     <br> 
-                                    <a href="tel:+84375642855">+84375642855</a>
+                                    <a href="tel:+84375642855">+84809090909</a>
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="contact-info-item">
-                        <h3 class="contact-info-content-title text-white mb-15">Email Address</h3>
+                        <h3 class="contact-info-content-title text-white mb-15">ĐỊA CHỈ Email</h3>
                         <div class="contact-info-item-inner d-flex align-items-center">
                             <div class="contact-info-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="31.57" height="31.13" viewBox="0 0 31.57 31.13">
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                     <div class="contact-info-item">
-                        <h3 class="contact-info-content-title text-white mb-15">Store Location</h3>
+                        <h3 class="contact-info-content-title text-white mb-15">VỊ TRÍ CỬA HÀNG</h3>
                         <div class="contact-info-item-inner d-flex align-items-center">
                             <div class="contact-info-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="31.57" height="31.13" viewBox="0 0 31.57 31.13">
@@ -109,13 +109,13 @@
                             </div>
                             <div class="contact-info-content">
                                 <p class="contact-info-content-desc text-white">
-                                    175 Tay Son, P. Trung Liet, Q. Dong Da, TP. Ha Noi. 
+                                    3/2 xuan khanh ninh kieu can tho
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="contact-info-item">
-                        <h3 class="contact-info-content-title text-white mb-15">Follow Us</h3>
+                        <h3 class="contact-info-content-title text-white mb-15">THEO DÕI</h3>
                         <ul class="contact-info-social d-flex">
                             <li class="contact-info-social-list">
                                 <a class="contact-info-social-icon" target="_blank" href="https://www.facebook.com">
@@ -165,7 +165,7 @@
     </section>
     <div class="contact-map-area section-padding pt-0">
         <iframe class="contact-map-iframe"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11001.351141236548!2d105.82337379395621!3d21.006247672788785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac8109765ba5%3A0xd84740ece05680ee!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBUaOG7p3kgbOG7o2k!5e0!3m2!1svi!2s!4v1664910852222!5m2!1svi!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6606.672953077613!2d105.7468667299302!3d10.070278958741138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a08793682f414b%3A0x30b44e3f144b4ecf!2zVHLGsOG7nW5nIMSR4bqhaSBo4buNYyBj4bqnbiB0aMah!5e0!3m2!1svi!2s!4v1700132772382!5m2!1svi!2s"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>

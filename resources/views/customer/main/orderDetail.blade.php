@@ -7,14 +7,14 @@
         <div class="my-container2">
             <div class="row">
                 <div class="col-lg-6">
-                    <h3 class="mb-30">Shipping Information</h3>
+                    <h3 class="mb-30">Thông tin vận chuyển</h3>
                     <div class="shipping-wrapper">
                         <div class="form-group">
-                            <label for="fullname">Full Name</label>
+                            <label for="fullname">Họ và tên</label>
                             <input class="form-control" name="user_fullname" value="{{$order->user_fullname}}" type="text" placeholder="Full Name" id="fullname" disabled>
                         </div>
                         <div class="form-group">
-                            <label for="phonenumber">Phone Number</label>
+                            <label for="phonenumber">Số điện thoại</label>
                             <input class="form-control" type="number" value="{{$order->user_phonenumber}}" name="user_phonenumber" placeholder="Phone Number" id="phonenumber" disabled>
                         </div>
                         <div class="form-group">
@@ -22,13 +22,13 @@
                             <input class="form-control" type="text" value="{{$order->user_email}}" name="user_email" placeholder="Email" id="email" disabled>
                         </div>
                         <div class="form-group">
-                            <label for="address">Address</label>
+                            <label for="address">Địa chỉ</label>
                             <input class="form-control" type="text" value="{{$order->user_address}}" name="user_address" placeholder="Address" id="address" disabled>
                         </div>
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label for="country">Country</label>
+                                    <label for="country">Quốc gia</label>
                                     <input class="form-control" type="text" value="{{$order->user_country}}"  name="user_country" placeholder="Country" id="country" disabled>
                                 </div>
                             </div>
@@ -42,14 +42,14 @@
                     </div>
                     <a class="return-cart" href="/my-account/order">
                         <ion-icon name="arrow-back-outline"></ion-icon>
-                        <div class="title">Return</div>
+                        <div class="title">Trở lại</div>
                     </a>
                 </div>
                 <div class="col-lg-6">
-                    <h3 class="mb-30">Your Order</h3>
+                    <h3 class="mb-30">Đơn hàng của bạn</h3>
                     <div class="order-total">
                         <ul class="order-table">
-                            <li class=" text-uppercase">Product <span>Total</span></li>
+                            <li class=" text-uppercase">Sản Phẩm <span>Tổng</span></li>
                             @foreach ($order->orderDetails as $orderDetail)
                             <li class="fw-normal">
                                 <div hret class="d-flex align-items-center">
@@ -77,11 +77,11 @@
                                 }
                                 $total = $subTotal - ($subTotal * $order->discount / 100);
                             ?>
-                            <li class="fw-normal text-uppercase">Subtotal <span>${{number_format($subTotal, 2)}}</span></li>
-                            <li class="total-price text-uppercase">Total <span>${{number_format($total,2)}}</span></li>
+                            <li class="fw-normal text-uppercase">TỔNG PHỤ <span>${{number_format($subTotal, 2)}}</span></li>
+                            <li class="total-price text-uppercase">Tổng <span>${{number_format($total,2)}}</span></li>
                         </ul>
                         <div class="payment-method-wrapper">
-                            <h4 class="mb-15">Payment Methods</h4>
+                            <h4 class="mb-15">Phương thức thanh toán</h4>
                             <span class="text-uppercase">{{$order->payment}}</span>
                         </div>
                     </div>

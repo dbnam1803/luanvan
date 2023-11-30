@@ -7,19 +7,19 @@
     <div class="details details2">
         <div class="recentOrders">
             <div class="cardHeader">
-                <h2>Orders List</h2>
+                <h2>Danh sách đơn hàng</h2>
             </div>
             <table>
                 <thead>
                     <tr>
                         <td>ID</td>
-                        <td>Full Name</td>
-                        <td>Phone Number</td>
-                        <td>Order Date</td>
-                        <td>Total Price</td>
-                        <td>Order Status</td>
-                        <td class="text-center">Payment Method</td>
-                        <td>Action</td>
+                        <td>Tên</td>
+                        <td>Số điện thoai</td>
+                        <td>Ngày đặt hàng</td>
+                        <td>Tổng giá</td>
+                        <td>Tình trạng đặt hàng</td>
+                        <td class="text-center">Phương thức thanh toán</td>
+                        <td>Hoạt động</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,15 +37,15 @@
                         <td>${{$order->total_price}}</td>
                         <td id='order-{{$order->id}}'>
                             @if($order->status == 0)
-                                <span class="status pending">Pending</span>
+                                <span class="status pending">Chưa xử lý</span>
                             @elseif($order->status == 1)
-                                <span class="status inprogress">In Progress</span>
+                                <span class="status inprogress">Trong tiến trình</span>
                             @elseif($order->status == 2)
-                                <span class="status delivered">Delivered</span>
+                                <span class="status delivered">	Đã giao hàng</span>
                             @elseif($order->status == 3)
-                                <span class="status return">Return</span>
+                                <span class="status return">Trả hàng</span>
                             @else
-                                <span class="status cancel">Cancel</span>    
+                                <span class="status cancel">Hủy</span>    
                             @endif
                         </td>
                         <td class="text-center text-uppercase">
@@ -53,9 +53,9 @@
                         </td>
                         <td>
                             @if($order->status == 0)
-                            <button class="btn btn-confirm" data-id="{{$order->id}}">Confirm</button>
+                            <button class="btn btn-confirm" data-id="{{$order->id}}">Xác nhận</button>
                             @endif
-                            <a href="admin/order/{{$order->id}}" class="btn">Detail</a>
+                            <a href="admin/order/{{$order->id}}" class="btn">Chi tiết</a>
                         </td>
                     </tr>
                 @endforeach

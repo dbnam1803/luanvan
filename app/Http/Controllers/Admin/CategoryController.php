@@ -36,7 +36,7 @@ class CategoryController extends Controller
 
         $this->categoryService->create($request);
 
-        return redirect('admin/category/create') -> with('success2','SUCCESS: New category was successfully added!');
+        return redirect('admin/category/create') -> with('success2','Danh mục mới đã được thêm thành công!');
     } 
 
     public function show(Category $category){
@@ -50,7 +50,7 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category){
         
         $this->categoryService->update($request, $category);
-        return redirect('admin/category') -> with('success','SUCCESS: Category was successfully edited!');
+        return redirect('admin/category') -> with('success','Danh mục đã được chỉnh sửa thành công!');
     }
 
     public function destroy($id){
@@ -58,7 +58,7 @@ class CategoryController extends Controller
         $result = $this->categoryService->destroy($id);   
 
         if($result){
-            return redirect('admin/category')->with('success','SUCCESS: Category was successfully deleted!');
+            return redirect('admin/category')->with('success','Danh mục đã được xóa thành công!');
         }
     }
 }

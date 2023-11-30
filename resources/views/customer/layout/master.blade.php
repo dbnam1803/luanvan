@@ -20,10 +20,10 @@
           <div class="header-shipping">
             <div class="header-shipping-wrapper d-flex">
               <div class="header-shipping-text text-white">
-                Welcome to Kenta.vn online Store
+              Chào mừng đến với Cửa hàng trực tuyến Kenta.vn
               </div>
               <div class="header-shipping-text text-white border-left">
-                <img class="header-shipping-text-icon" src="/customer/assets/img/bus.png" alt="bus-icon" />Track Your Order
+                <img class="header-shipping-text-icon" src="/customer/assets/img/bus.png" alt="bus-icon" />Theo dõi đơn hàng của bạn
               </div>
               <div class="header-shipping-text text-white border-left">
                 <img class="header-shipping-text-icon" src="/customer/assets/img/email.png" alt="email-icon" />anam18032001@gmail.com
@@ -39,11 +39,11 @@
               </a>
               <form action="/logout" method="POST">
                 @csrf
-                <button style="background: none" type="submit" class="language-currency-list text-white border-left">Log Out</button>
+                <button style="background: none" type="submit" class="language-currency-list text-white border-left">Đăng xuất</button>
               </form>
               @else
-              <a href="login" class="language-currency-list text-white">Log In</a>
-              <a href="register" class="language-currency-list text-white border-left">Register</a>
+              <a href="login" class="language-currency-list text-white">Đăng Nhập</a>
+              <a href="register" class="language-currency-list text-white border-left">Đăng ký</a>
               @endif
                
             </div>
@@ -64,7 +64,7 @@
             <div class="header-search d-flex">
               <div class="header-select-categories">
                 <select name="cate_search" class="header-select-inner">
-                  <option value="">All Categories</option>
+                  <option value="">Danh mục</option>
                   @foreach ($categories as $category)
                     @if($category->childs)
                       @foreach($category->childs as $child)
@@ -76,7 +76,7 @@
                 </select>
               </div>
               <div class="header-search-box">
-                <input class="header-search-input" value="{{request('search')}}" name="search" type="text" placeholder="What do you need?" />
+                <input class="header-search-input" value="{{request('search')}}" name="search" type="text" placeholder="Tìm kiếm..." />
                 <button type="submit" class="header-search-button text-white color-main">
                   <svg class="header__search--button__svg" xmlns="http://www.w3.org/2000/svg" width="27.51"
                     height="26.443" viewBox="0 0 512 512">
@@ -106,7 +106,7 @@
                       d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z"
                       fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path>
                   </svg>
-                  <span class="header-account-btn-text">My Account</span>
+                  <span class="header-account-btn-text">Tài Khoản</span>
                 </a>
               </li>
               <li class="header-account-item">
@@ -121,7 +121,7 @@
                       fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                       stroke-width="32"></path>
                   </svg>
-                  <span class="header-account-btn-text">Wish List</span>
+                  <span class="header-account-btn-text">Yêu thích</span>
                   @if(Auth::check())
                     <?php $wishList = count(Auth::user()->wishListItems) ?>
                     <span class="items-count color-main text-white wish-list"> {{$wishList}} </span>
@@ -149,7 +149,7 @@
                       </g>
                     </g>
                   </svg>
-                  <span class="header-account-btn-text">My Cart</span>
+                  <span class="header-account-btn-text">Giỏ hàng</span>
                   @if(Auth::check() && Auth::user()->level == 2)
                     <?php $carts = count(Auth::user()->cart->cartItems) ?>
                     <span class="items-count color-main text-white mycart"> {{$carts}} </span>
@@ -168,7 +168,7 @@
           <div class="header-menu">
             <div class="header-menu-navigation d-flex align-items-center">
               <li class="header-menu-items {{(request()->segment(1) == '') ? 'active' : ''}}">
-                <a class="header-menu-link" href="/">Home</a>
+                <a class="header-menu-link" href="/">Trang chủ</a>
               </li>
               <li class="header-menu-items {{(request()->segment(1) == 'shop') ? 'active' : ''}}">
                 <a class="header-menu-link" href="/shop">Shop</a>
@@ -197,16 +197,16 @@
                 <a class="header-menu-link" href="#">Blog</a>
               </li> -->
               <li class="header-menu-items">
-                <a class="header-menu-link" href="/aboutus">About US</a>
+                <a class="header-menu-link" href="/aboutus">Giới Thiệu</a>
               </li>
               <li class="header-menu-items">
-                <a class="header-menu-link" href="/contact">Contact</a>
+                <a class="header-menu-link" href="/contact">Liên hệ</a>
               </li>
             </div>
           </div>
           <p class="header-discount-text">
             <img class="header__discount-icon" src="/customer/assets/img/lamp.png" alt="lamp-icon" />
-            Special up to 60% Off all item
+            Đặc biệt giảm giá tới 60% tất cả mặt hàng
           </p>
         </div>
       </div>
@@ -222,21 +222,21 @@
     <div class="my-container">
       <div class="main-footer d-flex justify-content-between">
         <div class="footer-widget text-ofwhite  mr-30">
-          <h2 class="footer-widget-title mb-30">About Us</h2>
+          <h2 class="footer-widget-title mb-30">Giới thiệu</h2>
           <div class="footer-widget-inner">
             <div class="footer-widget-text text-ofwhite">
               <p>
-              Kenta.vn both spreads the luxurious-wearing culture as well
+              Kenta.vn vừa truyền bá văn hóa ăn mặc sang trọng vừa mang đến nền tảng
               <br>
-              as delivers a value driven, customer focused and responsible
+              thời trang có trách nhiệm, tập trung vào khách hàng và hướng tới giá trị
               <br>
-              fashion base in our continued effort to make Vietnam a trendier
+              trong nỗ lực không ngừng của chúng tôi nhằm biến Việt Nam thành một
               <br>
-              place for all fashionistas.
+              nơi thời thượng hơn cho tất cả các tín đồ thời trang.
               </p>
             </div>
             <div class="footer-social text-ofwhite">
-              <h3>Follow Us</h3>
+              <h3>Theo dõi</h3>
               <ul class="social-shear d-flex">
                 <li class="social-shear-list">
                   <a class="social-shear-list-icon" target="_blank" href="https://www.facebook.com">
@@ -284,49 +284,49 @@
         </div>
         <div class="footer-widget-menu d-flex">
           <div class="footer-widget text-ofwhite mr-30">
-            <h2 class="footer-widget-title mb-30">My Account</h2>
+            <h2 class="footer-widget-title mb-30">Tài khoản</h2>
             <ul class="footer-widget-menu">
               <li class="footer-widget-menu-list">
-                <a href="/my-account/profile">My Account</a>
+                <a href="/my-account/profile">Tài Khoản</a>
               </li>
               <li class="footer-widget-menu-list">
-                <a href="/cart">Shopping Cart</a>
+                <a href="/cart">Giỏ hàng</a>
               </li>
               <li class="footer-widget-menu-list">
-                <a href="/login">Login</a>
+                <a href="/login">Đăng nhập</a>
               </li>
               <li class="footer-widget-menu-list">
-                <a href="/register">Register</a>
+                <a href="/register">Đăng ký</a>
               </li>
               <li class="footer-widget-menu-list">
-                <a href="/checkout">Checkout</a>
+                <a href="/checkout">Thanh toán</a>
               </li>
               <li class="footer-widget-menu-list">
-                <a href="/wishlist">Wishlist</a>
+                <a href="/wishlist">Yêu thích</a>
               </li>
             </ul>
           </div>
           <div class="footer-widget text-ofwhite mr-30">
-            <h2 class="footer-widget-title mb-30">Categories</h2>
+            <h2 class="footer-widget-title mb-30">Danh mục</h2>
             <ul class="footer-widget-menu">
               <li class="footer-widget-menu-list">
-                <a href="/aboutus">About Us</a>
+                <a href="/aboutus">Giới thiệu</a>
               </li>
               <li class="footer-widget-menu-list">
-                <a href="/contact">Contact Us</a>
+                <a href="/contact">Liên hệ</a>
               </li>
-              <li class="footer-widget-menu-list">
+              <!-- <li class="footer-widget-menu-list">
                 <a href="#">Portfolio</a>
               </li>
               <li class="footer-widget-menu-list">
                 <a href="#">Privacy Policy</a>
-              </li>
+              </li> -->
               <li class="footer-widget-menu-list">
-                <a href="#">Compare</a>
+                <a href="#">So sánh</a>
               </li>
-              <li class="footer-widget-menu-list">
+              <!-- <li class="footer-widget-menu-list">
                 <a href="#">Frequently</a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -370,16 +370,16 @@
           </div>
         </div>
         <div class="footer-widget text-ofwhite">
-          <h2 class="footer-widget-title mb-30">Newsletter</h2>
+          <h2 class="footer-widget-title mb-30">Bản tin</h2>
           <div class="footer-widget-inner">
-            <p class="footer-widget-desc text-ofwhite m-0">Fill their seed open meat. Sea you great <br> Saw image stl
+            <p class="footer-widget-desc text-ofwhite m-0">Hãy để lại email của bản để nhận được tin mới nhất
             </p>
             <div class="newsletter-subscribe">
               <form class="newsletter-subscribe-form" action="#">
                 <label>
-                  <input class="newsletter-subscribe-input" placeholder="Email Address" type="email">
+                  <input class="newsletter-subscribe-input" placeholder="Nhập email" type="email">
                 </label>
-                <button class="newsletter-subscribe-button" type="submit">Subscribe</button>
+                <button class="newsletter-subscribe-button" type="submit">Gữi</button>
               </form>
             </div>
           </div>
@@ -387,7 +387,7 @@
       </div>
       <div class="footer-bottom d-flex justify-content-between align-items-center">
         <p class="copyright-content text-ofwhite m-0">
-          Copyright © 2023 <a href="/">Kenta.vn</a> . All Rights Reserved.Design By Kenta.vn
+          Bản quyền © 2023 <a href="/">Kenta.vn</a> .  Bảo lưu mọi quyền.Thiết kế bởi Kenta.vn
         </p>
         <div class="footer-payment text-right">
           <img class="" src="/customer/assets/img/payment-visa-card.png" alt="visa-card">

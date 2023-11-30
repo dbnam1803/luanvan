@@ -6,8 +6,8 @@
                         <img src="/customer/assets/img/shipping1.png" alt="">
                     </div>
                     <div class="shipping-items2-content">
-                        <h2 class="shipping-items2-content-title">Shipping</h2>
-                        <p class="shipping-items2-content-desc">From handpicked sellers</p>
+                        <h2 class="shipping-items2-content-title">Đang chuyển hàng</h2>
+                        <p class="shipping-items2-content-desc">Từ những người bán hàng được lựa chọn cẩn thận</p>
                     </div>
                 </div>
                 <div class="shipping-items2 d-flex align-items-center">
@@ -15,8 +15,8 @@
                         <img src="/customer/assets/img/shipping2.png" alt="">
                     </div>
                     <div class="shipping-items2-content">
-                        <h2 class="shipping-items2-content-title">Payment</h2>
-                        <p class="shipping-items2-content-desc">From handpicked sellers</p>
+                        <h2 class="shipping-items2-content-title">Thanh toán</h2>
+                        <p class="shipping-items2-content-desc">Từ những người bán hàng được lựa chọn cẩn thận</p>
                     </div>
                 </div>
                 <div class="shipping-items2 d-flex align-items-center">
@@ -24,8 +24,8 @@
                         <img src="/customer/assets/img/shipping3.png" alt="">
                     </div>
                     <div class="shipping-items2-content">
-                        <h2 class="shipping-items2-content-title">Return</h2>
-                        <p class="shipping-items2-content-desc">From handpicked sellers</p>
+                        <h2 class="shipping-items2-content-title">Trả hàng</h2>
+                        <p class="shipping-items2-content-desc">Từ những người bán hàng được lựa chọn cẩn thận</p>
                     </div>
                 </div>
                 <div class="shipping-items2 d-flex align-items-center">
@@ -33,8 +33,8 @@
                         <img src="/customer/assets/img/shipping4.png" alt="">
                     </div>
                     <div class="shipping-items2-content">
-                        <h2 class="shipping-items2-content-title">Support</h2>
-                        <p class="shipping-items2-content-desc">From handpicked sellers</p>
+                        <h2 class="shipping-items2-content-title">Hỗ trợ</h2>
+                        <p class="shipping-items2-content-desc">Từ những người bán hàng được lựa chọn cẩn thận</p>
                     </div>
                 </div>
             </div>

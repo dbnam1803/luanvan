@@ -9,28 +9,28 @@
                 @csrf
                 <div class="row">
                     <div class="col-lg-6">
-                        <h3 class="mb-30">Shipping Information</h3>
+                        <h3 class="mb-30">Thông tin vận chuyển</h3>
                         <div class="shipping-wrapper">
                             <div class="form-group">
-                                <label for="fullname">Full Name
+                                <label for="fullname">Họ và tên
                                     <span class="text-danger">*</span>
                                 </label>
                                 <input class="form-control" name="user_fullname" value="{{Auth::user()->fullname}}" type="text" placeholder="Full Name" id="fullname" required>
                             </div>
                             <div class="form-group">
-                                <label for="phonenumber">Phone Number
+                                <label for="phonenumber">Số điện thoại
                                     <span class="text-danger">*</span>
                                 </label>
                                 <input class="form-control" type="number" value="{{Auth::user()->phonenumber}}" name="user_phonenumber" placeholder="Phone Number" id="phonenumber" required>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email
+                                <label for="email">E-mail
                                     <span class="text-danger">*</span>
                                 </label>
                                 <input class="form-control" type="text" value="{{Auth::user()->email}}" name="user_email" placeholder="Email" id="email" required>
                             </div>
                             <div class="form-group">
-                                <label for="address">Address
+                                <label for="address">Địa chỉ
                                     <span class="text-danger">*</span>
                                 </label>
                                 <input class="form-control" type="text" value="{{Auth::user()->address}}" name="user_address" placeholder="Address" id="address" required>
@@ -38,7 +38,7 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <label for="country">Country
+                                        <label for="country">Quốc gia
                                             <span class="text-danger">*</span>
                                         </label>
                                         <input class="form-control" type="text" value="{{Auth::user()->country}}"  name="user_country" placeholder="Country" id="country" required>
@@ -56,14 +56,14 @@
                         </div>
                         <a class="return-cart" href="cart">
                             <ion-icon name="arrow-back-outline"></ion-icon>
-                            <div class="title">Return to cart</div>
+                            <div class="title">Trở về giỏ hàng</div>
                         </a>
                     </div>
                     <div class="col-lg-6">
-                        <h3 class="mb-30">Your Order</h3>
+                        <h3 class="mb-30">Đặt hàng</h3>
                         <div class="order-total">
                             <ul class="order-table">
-                                <li class=" text-uppercase">Product <span>Total</span></li>
+                                <li class=" text-uppercase">Sản phẩm <span>Tổng</span></li>
                                 @foreach($cartItems as $cartItem)
                                 <li class="fw-normal">
                                     <div hret class="d-flex align-items-center">
@@ -91,11 +91,11 @@
                                     }
                                     $total = $subTotal;
                                 ?>
-                                <li class="fw-normal text-uppercase">Subtotal <span>${{number_format($subTotal, 2)}}</span></li>
-                                <li class="total-price text-uppercase">Total <span>${{number_format($total,2)}}</span></li>
+                                <li class="fw-normal text-uppercase">TỔNG PHỤ <span>${{number_format($subTotal, 2)}}</span></li>
+                                <li class="total-price text-uppercase">TỔNG <span>${{number_format($total,2)}}</span></li>
                             </ul>
                             <div class="payment-method-wrapper">
-                                <h4 class="mb-15">Payment Methods</h4>
+                                <h4 class="mb-15">Phương thức thanh toán</h4>
                                 <ul class="d-flex justify-content-between">
                                     <!-- <li class="payment-method vnpay">
                                         <label for="vnpay">
@@ -123,7 +123,7 @@
                                 {{ \Session::forget('error') }}
                             @endif
                             <div class="order-btn">
-                                <button type="submit" class="primary-btn">Place Order</button>
+                                <button type="submit" class="primary-btn">Đặt hàng</button>
                             </div>
                         </div>
                     </div>

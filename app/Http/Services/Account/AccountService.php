@@ -5,9 +5,8 @@ namespace App\Http\Services\Account;
 use App\Models\User;
 use App\Models\Order;
 use App\Models\Product;
-use Str;
-use Auth;
-
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 class AccountService{
 
     public function update($request){

@@ -12,7 +12,7 @@
         <div class="my-container">
             <div class="cart-section-inner">
                 <form action="#">
-                    <h2 class="cart-title mb-30">Shopping Cart</h2>
+                    <h2 class="cart-title mb-30">Giỏ hàng</h2>
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="cart-table">
@@ -20,10 +20,10 @@
                                 <table class="cart-table-inner">
                                     <thead>
                                         <tr>
-                                            <th>Product</th>
-                                            <th>Price</th>
-                                            <th>Quantity</th>
-                                            <th>Total</th>
+                                            <th>Sản phẩm</th>
+                                            <th>Giá</th>
+                                            <th>Số lượng</th>
+                                            <th>Tổng</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -43,15 +43,15 @@
                                                         <div class="modal-dialog modal-dialog-centered">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h5 class="modal-title text-dark" >Confirm</h5>
+                                                                    <h5 class="modal-title text-dark" >Xác nhận</h5>
                                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                 </div>
                                                                 <div class="modal-body text-start text-dark">
-                                                                    <strong>Are you sure you want to delete this product? </strong>
+                                                                    <strong>Bạn có chắc chắn muốn xóa giỏ hàng của mình không? </strong>
                                                                 </div>
                                                                 <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-secondary border-0" data-bs-dismiss="modal">No</button>
-                                                                    <button type="button" onclick="removeCart({{$cartItem->id}})" data-bs-dismiss="modal" class="btn btn-primary color-main border-0" >Yes</button>
+                                                                    <button type="button" class="btn btn-secondary border-0" data-bs-dismiss="modal">Không</button>
+                                                                    <button type="button" onclick="removeCart({{$cartItem->id}})" data-bs-dismiss="modal" class="btn btn-primary color-main border-0" >Đúng</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -89,8 +89,8 @@
                                     </tbody>
                                 </table>
                                 <div class="cart-table-footer d-flex justify-content-between">
-                                    <a class="continue-shopping" href="/shop">Continue shopping</a>
-                                    <button type="button" class="clear-cart" data-bs-toggle="modal" data-bs-target="#modalClearCart">Clear cart</button>
+                                    <a class="continue-shopping" href="/shop">Tiếp tục mua hàng</a>
+                                    <button type="button" class="clear-cart" data-bs-toggle="modal" data-bs-target="#modalClearCart">Xóa giỏ hàng</button>
                                 </div>
                                 @else
                                 <div class="empty-product section-padding text-center">
@@ -111,11 +111,11 @@
                                         </svg>
                                     </div>
                                     <div class="empty-product-content">
-                                        <h3>No Product!</h3>
-                                        <p>Shopping now to enjoy great deals just for you.</p>
+                                        <h3>Không có sản phẩm!</h3>
+                                        <p>Mua sắm ngay bây giờ để tận hưởng những ưu đãi tuyệt vời dành riêng cho bạn.</p>
                                     </div>
                                     <div class="cart-table-footer">
-                                        <a class="continue-shopping" href="/shop">Continue shopping</a>
+                                        <a class="continue-shopping" href="/shop">Tiếp tục mua sắm</a>
                                     </div>
                                 </div>
                                 @endif
@@ -125,23 +125,23 @@
                         <div class="col-lg-4">
                             <div class="cart-summary">
                                 <div class="coupon-code mb-30">
-                                    <h3 class="coupon-code-title">Coupon</h3>
-                                    <p class="coupon-code-desc">Enter your coupon code if you have one.</p>
+                                    <h3 class="coupon-code-title">Phiếu mua hàng</h3>
+                                    <p class="coupon-code-desc">Nhập mã phiếu giảm giá của bạn nếu bạn có.</p>
                                     <div class="coupon-code-field d-flex">
                                         <label>
-                                            <input class="coupon-code-field-input" placeholder="Coupon code" type="text">
+                                            <input class="coupon-code-field-input" placeholder="Mã giảm giá" type="text">
                                         </label>
-                                        <button class="coupon-code-field-btn primary-btn" type="submit">Apply Coupon</button>
+                                        <button class="coupon-code-field-btn primary-btn" type="submit">Áp dụng</button>
                                     </div>
                                 </div>
                                 <div class="cart-note mb-20">
-                                    <h3 class="cart-note-title">Note</h3>
-                                    <p class="cart-note-desc">Add special instructions for your seller...</p>
+                                    <h3 class="cart-note-title">Ghi chú</h3>
+                                    <p class="cart-note-desc">Thêm hướng dẫn đặc biệt cho người bán của bạn...</p>
                                     <textarea class="cart-note-textarea"></textarea>
                                 </div>
                                 <div class="cart-summary-total mb-20">
                                     <div class="cart-summary-total-list">
-                                        <span>Subtotal</span>
+                                        <span>TỔNG PHỤ</span>
                                         <?php $subTotal = 0;
                                             foreach($cartItems as $cartItem){
                                                 $subTotal += ($cartItem->quantity * $cartItem->productDetail->product->price_sale);
@@ -153,18 +153,18 @@
                                         
                                     </div>
                                     <div class="cart-summary-total-list ">
-                                        <span>Grand total</span>
+                                        <span>TỔNG</span>
                                         <span class="grandTotal">${{ number_format($total , 2) }}</span>
                                     </div>
                                 </div>
                                 <div class="cart-summary-footer">
-                                    <p class="cart-summary-footer-desc">Shipping fees calculated at checkout</p>
+                                    <p class="cart-summary-footer-desc">Phí vận chuyển được tính khi thanh toán</p>
                                     <ul class="d-flex justify-content-between">
                                         <li>
-                                            <button class="cart-summary-footer-btn cart primary-btn" type="submit">Update Cart</button>
+                                            <button class="cart-summary-footer-btn cart primary-btn" type="submit">Cập nhật giỏ hàng</button>
                                         </li>
                                         <li>
-                                            <button type='button' class="cart-summary-footer-btn checkout primary-btn "  data-qty="{{$count_cart}}">Check Out</button>
+                                            <button type='button' class="cart-summary-footer-btn checkout primary-btn "  data-qty="{{$count_cart}}">Thủ tục thanh toán</button>
                                         </li>
                                     </ul>
                                 </div>
@@ -180,15 +180,15 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-dark" >Confirm</h5>
+                    <h5 class="modal-title text-dark" >Xác nhận</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-start text-dark">
-                    <strong>Are you sure you want to clear your cart? </strong>
+                    <strong>Bạn có chắc chắn muốn xóa giỏ hàng của mình không?</strong>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary border-0" data-bs-dismiss="modal">No</button>
-                    <button type="button" onclick="clearCart()" data-bs-dismiss="modal" class="btn btn-primary color-main border-0" >Yes</button>
+                    <button type="button" class="btn btn-secondary border-0" data-bs-dismiss="modal">Không</button>
+                    <button type="button" onclick="clearCart()" data-bs-dismiss="modal" class="btn btn-primary color-main border-0" >Đúng</button>
                 </div>
             </div>
         </div>
@@ -197,7 +197,7 @@
     <section class="product-section section-padding pt-0">
         <div class="my-container">
             <div class="section-heading text-center">
-            <h2 class="section-heading-title">Our Best Seller</h2>
+            <h2 class="section-heading-title">Bán chạy nhất</h2>
             </div>
             <div class="product-section-inner product-swiper swiper">
             <div class="swiper-wrapper">

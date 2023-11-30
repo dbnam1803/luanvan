@@ -7,7 +7,7 @@
     <div class="details details2">
         <div class="recentOrders">
             <div class="cardHeader">
-                <h2>Account Information #{{$user->id}}</h2>
+                <h2>Thông tin #{{$user->id}}</h2>
             </div>
             <div class="profile-wrapper">
                 <div class="row">
@@ -21,28 +21,28 @@
                         </div>
                         <a class="backToHome" href="./admin/user ">
                             <span class="icon"><ion-icon name="chevron-back-outline"></ion-icon></span>
-                            <span class="title">Back</span>
+                            <span class="title">trở về</span>
                         </a>
                     </div>
                     <div class="col-8">
                         <div class="profile-details">
                             <div class="form-group">
-                                <label for="fullNameAdmin">Full Name
+                                <label for="fullNameAdmin">Tên
                                 </label>
                                 <input disabled type="text" id="fullNameAdmin" value="{{ $user->fullname }}" readonly>
                             </div>
                             <div class="form-group">
-                                <label for="phoneNumberAdmin">Phone Number
+                                <label for="phoneNumberAdmin">Số điện thoại
                                 </label>
                                 <input disabled type="number" id="phoneNumberAdmin" value="{{ $user->phonenumber }}" readonly>
                             </div>
                             <div class="form-group">
-                                <label for="gender">Gender
+                                <label for="gender">Giới tính
                                 </label>
                                 <input disabled type="text" id="gender" value="{{ gender($user->gender) }}" readonly>
                             </div>
                             <div class="form-group">
-                                <label for="addressAdmin">Address
+                                <label for="addressAdmin">Địa chỉ
                                 </label>
                                 <input disabled type="text" id="addressAdmin" value="{{ $user->address }}" readonly>
                             </div>
@@ -60,7 +60,7 @@
                         <form action="/admin/user/delete/{{$user->id}}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btnSaveProfile">Delete</button>
+                            <button type="submit" class="btn btnSaveProfile">Xóa</button>
                         </form>
                     </div>
                 </div>

@@ -8,7 +8,7 @@ use App\Http\Services\Category\CategoryService;
 use App\Http\Services\Product\ProductService;
 use App\Models\WishList;
 use App\Models\Product;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class WishListController extends Controller
 {

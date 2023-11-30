@@ -34,7 +34,8 @@ class LoginController extends Controller
             return redirect('admin/home'); 
         }
 
-        return back()->with('error','ERORR: Incorrect email address or password');
+        return back()->with('error','LỖI: Địa chỉ email hoặc mật khẩu không chính xác
+        ​');
     }
 
     public function logout(Request $request)

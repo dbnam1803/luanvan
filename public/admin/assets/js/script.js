@@ -169,14 +169,14 @@ $(document).ready( function(e){
 
                     $("[data-id=" + order_id + "]").hide()
                     var status = $('#order-' + order_id).children()
-                    status.removeClass("pending")
+                    status.removeClass("Chờ xử lý")
                     status.addClass("inprogress")
-                    status.text("In Progress")
+                    status.text("Trong tiến trình")
                     
-                    createNotify('success', 'Order confirmation successfully!')
+                    createNotify('success', 'Xác nhận đơn hàng thành công!')
                 },
                 error:function(){
-                    createNotify('error', 'Order confirmation failed!')
+                    createNotify('error', 'Xác nhận đơn hàng không thành công!')
                 }
             })
         })
@@ -200,7 +200,7 @@ function action_customer(user_id){
                 actionBtn.text('Lock')
                 actionBtn.attr('data-active', 1)
 
-                createNotify('success', 'Account locked successfully')
+                createNotify('success', 'Khóa tài khoản thành công')
             }
             else{
 
@@ -208,7 +208,7 @@ function action_customer(user_id){
                 actionBtn.text('Active')
                 actionBtn.attr('data-active', 0)
 
-                createNotify('success', 'Account unlocked successfully')
+                createNotify('success', 'Đã mở khóa tài khoản thành công')
             }
 
         },

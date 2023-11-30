@@ -2,21 +2,20 @@
 <section class="product-section section-padding pt-0">
   <div class="my-container">
     <div class="section-heading text-center">
-      <h2 class="section-heading-title">New Products</h2>
+      <h2 class="section-heading-title">Sản phẩm mới</h2>
     </div>
     <!-- Nav tabs -->
     <ul class="product-tab nav justify-content-center">
       <li>
         <button class="product-tab-primary active" data-bs-toggle="tab" data-bs-target="#featured"
-          type="button">Featured</button>
+          type="button">Đặc sắc</button>
       </li>
       <li>
         <button class="product-tab-primary" data-bs-toggle="tab" data-bs-target="#trending"
-          type="button">Trending</button>
+          type="button">Xu hướng</button>
       </li>
       <li>
-        <button class="product-tab-primary" data-bs-toggle="tab" data-bs-target="#newarrival" type="button">New
-          Arrival</button>
+        <button class="product-tab-primary" data-bs-toggle="tab" data-bs-target="#newarrival" type="button">Hàng mới về</button>
       </li>
     </ul>
 
@@ -79,11 +78,11 @@
           <a href="#" class="banner-items-thumbnail position-relative">
             <img alt="" src="./customer/assets/img/banner5.png" />
             <div class="banner-items-content position-absolute">
-              <span class="banner-items-content-subtitle">Pick Your Items</span>
+              <span class="banner-items-content-subtitle">Chọn mặt hàng của bạn</span>
               <h2 class="banner-items-content-title">
-                Up to 25% Offer Order Now
+                Ưu đãi lên tới 25% Đặt hàng ngay
               </h2>
-              <span class="banner-items-content-link text-decoration-underline">Shop Now</span>
+              <span class="banner-items-content-link text-decoration-underline">Mua ngay</span>
             </div>
           </a>
         </div>
@@ -93,11 +92,11 @@
           <a href="#" class="banner-items-thumbnail position-relative">
             <img alt="" src="./customer/assets/img/banner6.png" />
             <div class="banner-items-content position-absolute">
-              <span class="banner-items-content-subtitle">Special Offer</span>
+              <span class="banner-items-content-subtitle">Chọn mặt hàng của bạn</span>
               <h2 class="banner-items-content-title">
-                Up to 25% Offer Order Now
+              Ưu đãi lên tới 25% Đặt hàng ngay
               </h2>
-              <span class="banner-items-content-link text-decoration-underline">Shop Now</span>
+              <span class="banner-items-content-link text-decoration-underline">Mua ngay</span>
             </div>
           </a>
         </div>

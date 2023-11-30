@@ -4,8 +4,8 @@ namespace App\Http\Services\Login;
 
 use App\Models\User;
 use App\Models\Cart;
-use Hash;
-use Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class LoginService{
 

@@ -48,7 +48,7 @@ class ProductController extends Controller
         $product = $this->productService->store($request);
         
         return redirect('admin/product/'. $product->id)
-                        ->with('success', 'SUCESSS: New product was successfully added!');
+                        ->with('success', 'Sản phẩm mới đã được thêm thành công!');
 
     }
 
@@ -65,14 +65,14 @@ class ProductController extends Controller
 
     public function update(Request $request, $product_id ){
         $this->productService->update($request, $product_id);
-        return redirect('admin/product') -> with('success','SUCCESS: Product was successfully edited!');
+        return redirect('admin/product') -> with('success','Sản phẩm đã được chỉnh sửa thành công!');
     }
 
     public function destroy($product_id){
         $result = $this->productService->destroy($product_id);
         
         if($result){
-            return back()->with('success', 'SUCCESS: Product was successfully deleted! ');
+            return back()->with('success', 'Sản phẩm đã được xóa thành công! ');
         }
     }
 

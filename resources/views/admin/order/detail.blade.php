@@ -16,37 +16,37 @@
                         <td style="width: 70%">#{{$order->id}}</td>
                     </tr>
                     <tr>
-                        <td>Full name</td>
+                        <td>Họ và tên</td>
                         <td>{{$order->user_fullname}}</td>
                     </tr>
                     <tr>
-                        <td>Phone Number</td>
+                        <td>Số điện thoại</td>
                         <td>{{$order->user_phonenumber}}</td>
                     </tr>
                     <tr>
-                        <td>Address</td>
+                        <td>Địa chỉ</td>
                         <td>{{$order->user_address}}, {{$order->user_country}}</td>
                     </tr>
                     <tr>
-                        <td>Order Date</td>
+                        <td>Ngày đặt hàng</td>
                         <td>{{$order->created_at}}</td>
                     </tr>
                     <tr>
-                        <td>Order Status</td>
+                        <td>Tình trạng đặt hàng</td>
                         
                         @if($order->status == 0)
-                        <td>Pending</td>
+                        <td>Chưa xử lý</td>
                         @elseif($order->status == 1)
-                        <td>In Progress</td>
+                        <td>Trong tiến trình</td>
                         @elseif($order->status == 2)
-                        <td>Delivered</td>
+                        <td>Đã giao hàng</td>
                         @else
-                        <td>Return</td>
+                        <td>Trả hàng</td>
                         @endif
                         
                     </tr>
                     <tr>
-                        <td>Payment Method</td>
+                        <td>Phương thức thanh toán</td>
                         <td class="text-uppercase">{{$order->payment}}</td>
                     </tr>
                 </tbody>
@@ -54,13 +54,13 @@
             <table>
                 <thead>
                     <tr>
-                        <td class="text-start">Product Name </td>
-                        <td>Color</td>
+                        <td class="text-start">tên sản phẩm </td>
+                        <td>Màu sắc</td>
                         <td>Size</td>
-                        <td>Unit Price</td>
-                        <td>Quantity</td>
-                        <td>Discount</td>
-                        <td>Subtotal</td>
+                        <td>Đơn giá</td>
+                        <td>Số lượng</td>
+                        <td>Giảm giá</td>
+                        <td>Tổng Phụ</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -85,7 +85,7 @@
                 </tbody>
             </table>
             <div class="totalPrice d-flex justify-content-between">
-                <strong>Total:</strong>
+                <strong>Tổng:</strong>
                 <strong>${{$order->total_price}}</strong>
             </div>
         </div>

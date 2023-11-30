@@ -7,7 +7,7 @@
     <div class="details details2">
         <div class="recentOrders">
             <div class="cardHeader">
-                <h2>Profile Customer #{{$user->id}}</h2> 
+                <h2>Hồ sơ khách hàng #{{$user->id}}</h2> 
             </div>
             <div class="profile-wrapper">
                 <div class="row">
@@ -21,7 +21,7 @@
                         </div>
                         <a class="backToHome" href="admin/home">
                             <span class="icon"><ion-icon name="chevron-back-outline"></ion-icon></span>
-                            <span class="title">Back To Home</span>
+                            <span class="title">Trở về trang chủ</span>
                         </a>
                     </div>
                     <div class="col-8">
@@ -29,20 +29,20 @@
                             @csrf
                             <div class="profile-details">
                                 <div class="form-group">
-                                    <label for="fullNameAdmin">Full Name</label>
+                                    <label for="fullNameAdmin">Tên</label>
                                     <input type="text" id="fullNameAdmin" name="fullname" value="{{$user->fullname}}"disabled>
                                 </div>
                                 <div class="form-group">
-                                    <label for="phoneNumberAdmin">Phone Number</label>
+                                    <label for="phoneNumberAdmin">Số điện thoại</label>
                                     <input type="number" id="phoneNumberAdmin" name="phonenumber" value="{{$user->phonenumber}}"disabled>
                                 </div>
                                 <div class="form-group">
-                                    <label for="gender">Gender</label>
-                                    <input type="text" value="{{ $user->gender == null ? 'Not available' : gender ($user->gender)}}" disabled>
+                                    <label for="gender">Giới tính</label>
+                                    <input type="text" value="{{ $user->gender == null ? 'Không có sẵn' : gender ($user->gender)}}" disabled>
                                 </div>
                                 <div class="form-group">
-                                    <label for="addressAdmin">Address</label>
-                                    <input type="text" id="addressAdmin" name="address" value="{{$user->address ?? 'Not available'}}" disabled>
+                                    <label for="addressAdmin">Địa chỉ</label>
+                                    <input type="text" id="addressAdmin" name="address" value="{{$user->address ?? 'Không có sẵn'}}" disabled>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>

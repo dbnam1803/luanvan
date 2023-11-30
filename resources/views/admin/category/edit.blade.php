@@ -7,24 +7,24 @@
         <div class="details details2">
             <div class="recentOrders">
                 <div class="cardHeader">
-                    <h2>Edit Category #{{$category->id}}</h2>
+                    <h2>Chỉnh sửa danh mục #{{$category->id}}</h2>
                 </div>
                 <form class="formProduct" method="POST" action="" novalidate>
                     @csrf
                     <div class="row justify-content-center">
                         <div class="col-7">
                             <div class="form-group">
-                                <label for="categoryname">Category Name
+                                <label for="categoryname">Tên danh mục
                                     <span class="text-danger">*</span>
                                 </label>
-                                <input class="form-controll" type="text" value="{{$category->categoryname}}" name="categoryname" placeholder="Category Name" id="categoryname">
+                                <input class="form-controll" type="text" value="{{$category->categoryname}}" name="categoryname" placeholder="Ten danh mục" id="categoryname">
                                 <div class="invalid-feedback">Please type a category name valid</div>
                                 @error('categoryname')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="category">Category
+                                <label for="category">Loại danh mục
                                     <span class="text-danger">*</span>
                                 </label>
                                 <select name="parent_id" id="category" >
@@ -36,17 +36,17 @@
                                
                             </div>
                             <div class="form-group">
-                                <label for="description">Description
+                                <label for="description">Miêu tả
                                     <span class="text-danger">*</span>
                                 </label>
                                 <textarea class="textarea-category"name="description" id="description" cols="30" rows="10">{{$category->description}}</textarea>
-                                <div class="invalid-feedback">Please enter a description category</div>
+                                <div class="invalid-feedback">Nhập miêu tả danh mục</div>
                                 @error('description')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="active">Active
+                                <label for="active">Trạng thái
                                     <span class="text-danger">*</span>
                                 </label>
                                 <select name="active" id="active" >
@@ -57,7 +57,7 @@
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
-                            <button type="submit" class="btn btnAdd btnSaveProfile">Save</button>
+                            <button type="submit" class="btn btnAdd btnSaveProfile">Lưu</button>
                         </div>
                     </div>
                     

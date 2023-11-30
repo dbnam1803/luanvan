@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Validator;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
 
@@ -51,8 +51,8 @@ class UserController extends Controller
             'phonenumber' =>'required|min:10|numeric',
             'level' =>'required'
         ], [
-            'phonenumber.numeric' => 'Phone number must include digits.',
-            'password.confirmed' => 'Confirm password does not match.'
+            'phonenumber.numeric' => 'Số điện thoại phải bao gồm các chữ số.',
+            'password.confirmed' => 'Xác nhận mật khẩu không đúng.'
         ]);
 
         if ($validator->fails()) {
@@ -71,7 +71,7 @@ class UserController extends Controller
         $user['password'] = Hash::make($request->get('password'));
 
         if (User::create($user)){
-            return redirect('admin/user/create')->with('success', 'SUCCESS: New user was successfully added!');
+            return redirect('admin/user/create')->with('success', 'Người dùng mới đã được thêm thành công!');
         }
     }
 
@@ -121,7 +121,7 @@ class UserController extends Controller
     {   
         $user = User::Find($id);
         $user->delete();
-        return redirect('admin/user')->with('success','WELL DONE: User has been deleted successfully!');
+        return redirect('admin/user')->with('success','Người dùng đã được xóa thành công!');
     }
 
 }

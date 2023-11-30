@@ -8,7 +8,7 @@ use App\Http\Services\Category\CategoryService;
 use App\Http\Services\Account\AccountService;
 use App\Http\Services\Checkout\CheckoutService;
 use App\Models\Order;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class AccountController extends Controller
 {

@@ -11,20 +11,20 @@
     <div class="details details2">
         <div class="recentOrders">
             <div class="cardHeader">
-                <h2>Employees List</h2>
+                <h2>Danh sách nhân viên</h2>
                 <a href="/admin/user/create" class="btn btn2">
                     <span class="icon"><ion-icon name="add-circle-outline"></ion-icon></span>
-                    <span class="title">Create New Account</span>
+                    <span class="title">Tạo tài khoản</span>
                 </a>
             </div>
             <table>
                 <thead>
                     <tr>
                         <td>ID</td>
-                        <td>Full Name</td>
+                        <td>Tên</td>
                         <td>Email</td>
                         <td>Level</td>
-                        <td>Action</td>
+                        <td>Hành động</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,11 +38,11 @@
                         <td>{{ $user->email}}</td>
                         <td>{{ level( $user->level) }}</td>
                         <td class="d-flex justify-content-end">
-                            <a href="/admin/user/{{$user->id}}" class="btn mr-10">Detail</a>
+                            <a href="/admin/user/{{$user->id}}" class="btn mr-10">Chi tiết</a>
                             <form method="POST" action="/admin/user/delete/{{$user->id}}"> 
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn">Delete</button>
+                                <button type="submit" class="btn">Xóa</button>
                             </form>
                         </td>
                     </tr>

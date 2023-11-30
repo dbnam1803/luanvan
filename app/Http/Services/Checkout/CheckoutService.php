@@ -9,9 +9,9 @@ use App\Models\ProductDetail;
 use App\Models\Order;
 use App\Models\Product;
 use App\Helpers\VNPay;
-use Auth;
-use Mail;
+use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\Mail;
 class CheckoutService{
 
     public function addOrder($request){
@@ -100,7 +100,7 @@ class CheckoutService{
         $email_to = $order->user_email;
 
         Mail::send('customer.main.sendmail', compact('order'), function ($message) use($email_to) {
-            $message->from(env('MAIL_USERNAME'), 'Stable eShop');
+            $message->from(env('MAIL_USERNAME'), 'Kenta.vn Shop');
             $message->to($email_to);
             $message->subject('Order Notification');
         });

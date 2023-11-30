@@ -7,17 +7,17 @@
     <div class="details details2">
         <div class="recentOrders">
             <div class="cardHeader">
-                <h2>Customers List</h2>
+                <h2>Danh sách khách hàng</h2>
             </div>
             <table>
                 <thead>
                     <tr>
                         <td>ID</td>
-                        <td>Name</td>
-                        <td>Phone Number</td>
-                        <td>Address</td>
+                        <td>Tên</td>
+                        <td>Số điện thoại</td>
+                        <td>Địa chỉ</td>
                         <td>Email</td>
-                        <td>Action</td>
+                        <td>Hành động</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,15 +38,15 @@
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title">Confirm</h5>
+                                            <h5 class="modal-title">xác nhận</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body text-start">
-                                            <strong>Are you sure you want to lock <span class="text-danger">{{$user->fullname}}</span> customer?</strong>
+                                            <strong>Bạn có muốn khóa khách hàng  <span class="text-danger">{{$user->fullname}}</span> </strong>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btnNo" data-bs-dismiss="modal">No</button>
-                                            <button type="button" class="btn btnYes" onclick="action_customer({{$user->id}})" data-bs-dismiss="modal" >Yes</button>
+                                            <button type="button" class="btn btnNo" data-bs-dismiss="modal">Không</button>
+                                            <button type="button" class="btn btnYes" onclick="action_customer({{$user->id}})" data-bs-dismiss="modal" >Có</button>
                                         </div>
                                     </div>
                                 </div>
@@ -57,21 +57,21 @@
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title">Confirm</h5>
+                                            <h5 class="modal-title">Xác nhận</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body text-start">
-                                            <strong>Are you sure you want to unlock <span class="text-danger">{{$user->fullname}}</span> customer?</strong>
+                                            <strong>Bạn có muốn mở khóa khách hàng<span class="text-danger">{{$user->fullname}}</span></strong>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btnNo" data-bs-dismiss="modal">No</button>
-                                            <button type="button" class="btn btnYes" onclick="action_customer({{$user->id}})" data-bs-dismiss="modal" >Yes</button> 
+                                            <button type="button" class="btn btnNo" data-bs-dismiss="modal">Không</button>
+                                            <button type="button" class="btn btnYes" onclick="action_customer({{$user->id}})" data-bs-dismiss="modal" >Có</button> 
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             @endif
-                            <a href="admin/customer/{{$user->id}}" class="btn">Detail</a>
+                            <a href="admin/customer/{{$user->id}}" class="btn">Chi tiết</a>
                         </td>
                     </tr>
                     @endforeach

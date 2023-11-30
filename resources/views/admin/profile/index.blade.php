@@ -11,7 +11,7 @@
     <div class="details details2">
         <div class="recentOrders">
             <div class="cardHeader">
-                <h2>Profile Settings</h2>
+                <h2>Hồ sơ</h2>
             </div>
             @if(Auth::check())
             <div class="profile-wrapper">
@@ -26,7 +26,7 @@
                         </div>
                         <a class="backToHome" href="admin/home">
                             <span class="icon"><ion-icon name="chevron-back-outline"></ion-icon></span>
-                            <span class="title">Back To Home</span>
+                            <span class="title">Trở về trang chủ</span>
                         </a>
                     </div>
                     <div class="col-8">
@@ -34,22 +34,22 @@
                             @csrf
                             <div class="profile-details">
                                 <div class="form-group">
-                                    <label for="fullNameAdmin">Full Name</label>
+                                    <label for="fullNameAdmin">Tên</label>
                                     <input type="text" id="fullNameAdmin" name="fullname" value="{{Auth::user()->fullname}}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="phoneNumberAdmin">Phone Number</label>
+                                    <label for="phoneNumberAdmin">Số điện thoại</label>
                                     <input type="number" id="phoneNumberAdmin" name="phonenumber" value="{{Auth::user()->phonenumber}}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="gender">Gender</label>
+                                    <label for="gender">Giới tính</label>
                                     <select name="gender" id="gender">
-                                        <option value="0" {{Auth::user()->gender == 0 ? 'selected' : '' }} >Male</option>
-                                        <option value="1" {{Auth::user()->gender == 1 ? 'selected' : '' }}>Female</option>
+                                        <option value="0" {{Auth::user()->gender == 0 ? 'selected' : '' }} >Nam</option>
+                                        <option value="1" {{Auth::user()->gender == 1 ? 'selected' : '' }}>Nữ</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="addressAdmin">Address</label>
+                                    <label for="addressAdmin">Địa chỉ</label>
                                     <input type="text" id="addressAdmin" name="address" value="{{Auth::user()->address}}">
                                 </div>
                                 <div class="form-group">
@@ -61,7 +61,7 @@
                                     <input type="text" value="{{level(Auth::user()->level)}}" disabled>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btnSaveProfile">Save</button>
+                            <button type="submit" class="btn btnSaveProfile">Lưu</button>
                         </form>
                     </div>
                 </div>

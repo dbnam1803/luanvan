@@ -8,9 +8,9 @@
             <div class="row row-cols-1">
             <div class="col">
                 <div class="breadcrumb-content text-center">
-                <h1 class="breadcrumb-content-title text-white">Product Details</h1>
+                <h1 class="breadcrumb-content-title text-white">Thông tin chi tiết sản phẩm</h1>
                 <ul class="breadcrumb-content-menu d-flex justify-content-center mb-0">
-                    <li class="breadcrumb-content-menu-items"><a class="text-white" href="/">Home</a></li>
+                    <li class="breadcrumb-content-menu-items"><a class="text-white" href="/">Trang chủ</a></li>
                     <div class="breadcrumb-divider"></div>
                     <li class="breadcrumb-content-menu-items"><a href="{{$product->category->slug}}.htm" class="text-white">{{$product->category->categoryname}}</a></li>
                 </ul>
@@ -67,9 +67,9 @@
                             <input type="hidden" class="price" name="price" value="{{$product->price_sale}}" >
                             <h2 class="product-details-info-title mb-15">{{$product->productname}}</h2>
                             <div class="product-details-info-price mb-10">
-                                <span class="current-price">${{number_format($product->price_sale,2)}}</span>
+                                <span class="current-price">{{number_format($product->price_sale,2)}}đ</span>
                                 <span class="price-divided"></span>
-                                <span class="old-price">${{number_format($product->price, 2)}}</span>
+                                <span class="old-price">{{number_format($product->price, 2)}}đ</span>
                             </div>
                             <div class="product-details-info-rating d-flex align-items-center mb-15">
                                 <ul class="rating d-flex">
@@ -129,7 +129,7 @@
                             <div class="product-variant">
                                 <div class="product-variant-list mb-10">
                                     <fieldset class="variant-input-fieldset">
-                                        <legend class="product-variant-title mb-8">Color: </legend>
+                                        <legend class="product-variant-title mb-8">Màu sắc: </legend>
                                         <div class="d-flex">
                                             @foreach($productDetails as $productDetail)
                                             <input class="getColor" value="{{$productDetail['color']}}" type="radio" name="color" id="{{$productDetail['color']}}-color" hidden>
@@ -145,7 +145,7 @@
                                 </div>
                                 <div class="product-variant-list mb-15">
                                     <fieldset id="test" class="variant-input-fieldset" >
-                                        <legend class="product-variant-title mb-8">Select Size :</legend>
+                                        <legend class="product-variant-title mb-8">Chọn Size :</legend>
                                         @if($product->quantity != 0)
                                             <input class="product-size" value="XS" type="radio" name="size" id="XS-size" hidden>
                                             <label class="variant-size-value" for="XS-size">XS</label>
@@ -161,7 +161,7 @@
                                             <label class="variant-size-value" for="XXL-size">XXL</label>
                                         @else
                                             <span class="text-danger text-uppercase">
-                                                <strong>Sold Out</strong>
+                                                <strong>Bán hết</strong>
                                             </span>
                                         @endif    
                                         @error('size')
@@ -169,7 +169,7 @@
                                         @enderror
                                     </fieldset>
                                 </div>
-                                <p id="instock" class="mb-8">Available {{$product->quantity}} products in stock</p>
+                                <p id="instock" class="mb-8">có sẳn {{$product->quantity}} sản phẩm trong kho</p>
 
                                 <div class="product-variant-list d-flex align-items-center mb-20">
                                     <div class="quantity-box">
@@ -177,7 +177,7 @@
                                         <input type="number" name="quantity" class="quantity-number text-center" value="1">
                                         <button type="button" class="quantity-value increase" value="Increase Value">+</button>
                                     </div>
-                                    <button class="quickview-cart-btn primary-btn" type="button">Add To Cart</button>
+                                    <button class="quickview-cart-btn primary-btn" type="button">Thêm vào giỏ hàng</button>
                                 </div>
                                 <div class="product-variant-list mb-15">
                                 @if(Auth::check())
@@ -190,7 +190,7 @@
                                                     stroke-linejoin="round" stroke-width="32">
                                                 </path>
                                             </svg>
-                                            <span>Added to Wishlist</span>
+                                            <span>Thêm yêu thích</span>
                                         </button>
                                     @else
                                         <button type="button" class="variant-wishlist-btn {{$product->id}}" onclick="addWishList({{$product->id}})">
@@ -201,7 +201,7 @@
                                                     stroke-linejoin="round" stroke-width="32">
                                                 </path>
                                             </svg>
-                                            <span>Add to Wishlist</span>
+                                            <span>Thêm yêu thích</span>
                                         </button>
                                     @endif
                                 @else
@@ -213,7 +213,7 @@
                                                 stroke-linejoin="round" stroke-width="32">
                                             </path>
                                         </svg>
-                                        <span>Add to Wishlist</span>
+                                        <span>Thêm yêu thích</span>
                                     </button>
                                 @endif
                                     <!-- <button class="variant-buy-now-btn primary-btn" type="submit">Buy Now</button> -->
@@ -223,7 +223,7 @@
 
                             <div>
                                 <p class="mb-10">
-                                    <strong>Brand: </strong>{{$product->brand->brandname}}
+                                    <strong>Thương hiệu: </strong>{{$product->brand->brandname}}
                                 </p>
                                 <!-- <p class="mb-10"> <strong>Color: </strong>
                                 @foreach($productDetails as $productDetail)
@@ -231,15 +231,15 @@
                                 @endforeach
                                 </p > -->
                                 <p class="mb-10">
-                                    <strong>Style code: </strong>{{$product->sku}}
+                                    <strong>Mã Kiểu: </strong>{{$product->sku}}
                                 </p>
                                 <p class="mb-10">
-                                    <strong>Type: </strong>{{$product->category->categoryname}}
+                                    <strong> Loại: </strong>{{$product->category->categoryname}}
                                 </p>
                             </div>    
 
                             <div class="quickview-social d-flex align-items-center mb-15">
-                                <label class="quickview-social-title">Social Share :</label>
+                                <label class="quickview-social-title">Chia sẻ :</label>
                                 <ul class="quickview-social-wrapper d-flex">
                                     <li class="quickview-social-list">
                                         <a href="fb.com" class="quickview-social-icon color-main">
@@ -277,7 +277,7 @@
                                 </ul>
                             </div>
                             <div class="guarantee-safe-checkout">
-                                <label>Guaranteed Safe Checkout : </label>
+                                <label>Đảm bảo thanh toán an toàn : </label>
                                 <img src="./customer/assets/img/safe-checkout.png" alt="Payment Image">
                             </div>
                         </div>
@@ -294,22 +294,7 @@
                     <ul class="product-details-tab nav d-flex mb-30">
                         <li class="product-details-tab-list">
                             <button class="product-details-tab-list-btn active" data-bs-toggle="tab" data-bs-target="#description"
-                                type="button">Description</button>
-                        </li>
-                        <li class="product-details-tab-list">
-                            <button class="product-details-tab-list-btn" data-bs-toggle="tab"
-                                data-bs-target="#warrantypolicy" type="button">Warranty
-                                Policy</button>
-                        </li>
-                        <li class="product-details-tab-list">
-                            <button class="product-details-tab-list-btn" data-bs-toggle="tab"
-                                data-bs-target="#preserveguide" type="button">Preserve
-                                Guide</button>
-                        </li>
-                        <li class="product-details-tab-list">
-                            <button class="product-details-tab-list-btn" data-bs-toggle="tab"
-                                data-bs-target="#sizeguide" type="button">Size
-                                Guide</button>
+                                type="button">Mô tả</button>
                         </li>
                     </ul>
                     <div class="product-details-tab-inner">
@@ -318,45 +303,6 @@
                                 <div class="product-tab-content">
                                     <div class="product-tab-content-step mb-30">
                                         <p class="product-tab-content-desc">{!! $product->description !!}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="warrantypolicy">
-                                <div class="product-tab-content">
-                                    <div class="product-tab-content-step mb-30">
-                                        <h2 class="product-tab-content-title mb-10">Nam provident sequi</h2>
-                                        <p class="product-tab-content-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam provident sequi, nemo
-                                            sapiente culpa nostrum rem eum perferendis quibusdam, magnam a vitae corporis! Magnam enim modi, illo harum suscipit
-                                            tempore aut dolore doloribus deserunt voluptatum illum, est porro? Ducimus dolore accusamus impedit ipsum maiores,
-                                            ea iusto temporibus numquam eaque mollitia fugiat laborum dolor tempora eligendi voluptatem quis necessitatibus nam
-                                            ab?
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="preserveguide">
-                                <div class="product-tab-content">
-                                    <div class="product-tab-content-step mb-30">
-                                        <h2 class="product-tab-content-title mb-10">Nam provident sequi</h2>
-                                        <p class="product-tab-content-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam provident sequi, nemo
-                                            sapiente culpa nostrum rem eum perferendis quibusdam, magnam a vitae corporis! Magnam enim modi, illo harum suscipit
-                                            tempore aut dolore doloribus deserunt voluptatum illum, est porro? Ducimus dolore accusamus impedit ipsum maiores,
-                                            ea iusto temporibus numquam eaque mollitia fugiat laborum dolor tempora eligendi voluptatem quis necessitatibus nam
-                                            ab?
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="sizeguide">
-                                <div class="product-tab-content">
-                                    <div class="product-tab-content-step mb-30">
-                                        <h2 class="product-tab-content-title mb-10">Nam provident sequi</h2>
-                                        <p class="product-tab-content-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam provident sequi, nemo
-                                            sapiente culpa nostrum rem eum perferendis quibusdam, magnam a vitae corporis! Magnam enim modi, illo harum suscipit
-                                            tempore aut dolore doloribus deserunt voluptatum illum, est porro? Ducimus dolore accusamus impedit ipsum maiores,
-                                            ea iusto temporibus numquam eaque mollitia fugiat laborum dolor tempora eligendi voluptatem quis necessitatibus nam
-                                            ab?
-                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -373,7 +319,7 @@
     <section class="product-section section-padding">
         <div class="my-container2">
             <div class="section-heading text-center">
-                <h2 class="section-heading-title">Related Products</h2>
+                <h2 class="section-heading-title">Những sảm phẩm tương tự</h2>
             </div>
             <div class="product-section-inner product-swiper2 swiper">
                 <div class="swiper-wrapper">

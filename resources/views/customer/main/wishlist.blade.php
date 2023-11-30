@@ -7,15 +7,15 @@
         <div class="my-container2">
             <div class="cart-section-inner">
                 <form action="#">
-                    <h2 class="cart-title mb-30">Wish List</h2>
+                    <h2 class="cart-title mb-30">Danh sách yêu thích</h2>
                     <div class="cart-table">
                       <table class="cart-table-inner">
                           <thead>
                               <tr>
-                                  <th>Product</th>
-                                  <th>Price</th>
-                                  <th class="text-center">Stock status</th>
-                                  <th class="text-right">View Product</th>
+                                  <th>Sản Phẩm</th>
+                                  <th>Giá</th>
+                                  <th class="text-center">TÌNH TRẠNG TỒN KHO</th>
+                                  <th class="text-right">XEM SẢN PHẨM</th>
                               </tr>
                           </thead>
                           <tbody>
@@ -47,13 +47,13 @@
                                   </td>
                                   <td class="text-center">
                                     @if($wishList->product->quantity != 0)
-                                        <span class="in-stock text-main-color">In Stock</span>
+                                        <span class="in-stock text-main-color">Trong kho</span>
                                     @else
-                                        <span class="in-stock text-main-color">Sold Out</span>
+                                        <span class="in-stock text-main-color">Bán hết</span>
                                     @endif
                                   </td>
                                   <td class="text-right">
-                                    <a class="wishlist-cart-btn primary-btn" href="/{{$wishList->product->slug}}.html">View</a>
+                                    <a class="wishlist-cart-btn primary-btn" href="/{{$wishList->product->slug}}.html">Xem</a>
                                   </td>
                               </tr>
                             @endforeach
@@ -61,8 +61,8 @@
                       </table>
                       {{ $wishLists->links()}}
                       <div class="cart-table-footer d-flex justify-content-between">
-                          <a class="continue-shopping" href="/shop">Continue shopping</a>
-                          <a href="/cart" class="clear-cart" type="submit">View cart</a>
+                          <a class="continue-shopping" href="/shop">Tiếp tục mua hàng</a>
+                          <a href="/cart" class="clear-cart" type="submit">Xem giỏ hàng</a>
                       </div>
                     </div>
                 </form>
@@ -73,7 +73,7 @@
     <section class="product-section section-padding">
       <div class="my-container2">
         <div class="section-heading text-center">
-          <h2 class="section-heading-title">You may also like</h2>
+          <h2 class="section-heading-title">Bạn cũng có thể thích</h2>
         </div>
         <div class="product-section-inner product-swiper2 swiper">
           <div class="swiper-wrapper">

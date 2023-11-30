@@ -39,7 +39,7 @@ class ProductDetailController extends Controller
         $this->productService->updateQuantity($product_id);
 
         return redirect('admin/product/'.$product_id.'/detail/create')
-                            ->with('success', 'SUCCESS: New product detail was successfully added!');
+                            ->with('success', 'Chi tiết sản phẩm mới đã được thêm thành công!');
     }
 
     public function edit($product_id, $productDetail_id){
@@ -55,7 +55,7 @@ class ProductDetailController extends Controller
         $this->productService->updateQuantity($product_id);
 
         return redirect('admin/product/'.$product_id.'/detail')
-                        ->with('success', 'SUCCESS: Product detail was successfully edited!');
+                        ->with('success', 'Chi tiết sản phẩm đã được chỉnh sửa thành công!');
     }
 
     public function destroy($product_id, $productDetail_id){
@@ -63,7 +63,7 @@ class ProductDetailController extends Controller
        $this->productDetailService->destroy($productDetail_id);
        $this->productService->updateQuantity($product_id);
 
-       return back()->with('success', 'SUCCESS: Product detail was successfully deleted!');
+       return back()->with('success', 'Chi tiết sản phẩm đã được xóa thành công!');
         
     }
 

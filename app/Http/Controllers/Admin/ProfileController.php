@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Validator;
-use Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -16,7 +16,7 @@ class ProfileController extends Controller
 
     public function update(Request $request){
         Auth::user()->fill($request->all())->save();
-        return redirect()->back()->with('success','SUCCESS: Your profile has been updated!');
+        return redirect()->back()->with('success','Hồ sơ của bạn đã được cập nhật!');
     }
 
     public function changePassword(){
@@ -40,7 +40,7 @@ class ProfileController extends Controller
             Auth::user()->password = Hash::make($request->input('password'));
             Auth::user()->save();
             Auth::logout();
-            return redirect()->route('login')->with('success', 'SUCCESS: Your password changed successfully');
+            return redirect()->route('login')->with('success', 'Mật khẩu của bạn đã được thay đổi thành công');
         }
         else{
             return back()->with('error2', 'Password is not correct');
